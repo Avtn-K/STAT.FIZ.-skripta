@@ -1,2 +1,3 @@
-# Statisti-ka-fizika---skripta
-Rješenja zadataka iz knjige Statistička fizika, autora Vladimira Šipsa.
+# Statisticka-fizika---skripta
+Rjesenja zadataka iz knjige Statisticka fizika, autora Vladimira Sipsa. 
+Skripta je pisana u LaTeXu i kod je javno objavljen i slobodan za koristenje.
