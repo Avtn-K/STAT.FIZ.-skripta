@@ -1,0 +1,1617 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\addto\captionsenglish{\renewcommand{\contentsname}{Sadr\v{z}aj}}
+\addto\captionsenglish{\renewcommand{\refname}{Bibliografija}}
+\usepackage[cp1250]{inputenc}
+\usepackage{amsfonts}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\setcounter{section}{1}
+
+\newtheorem{TM}{Teorem}[subsection]
+%\renewcommand{\theTM}{\thesubsection\arabic{TM}}
+\newtheorem{DEF}{Definicija}[subsection]
+%\renewcommand{\theDEF}{\thesubsection\arabic{DEF}}
+\newtheorem{LEM}{Lema}[subsection]
+%\renewcommand{\theLEM}{\thesubsection\arabic{LEM}}
+\newtheorem{PROP}{Propozicija}[subsection]
+%\renewcommand{\thePROP}{\thesubsection\arabic{PROP}}
+\newtheorem{ZDK}{Zadatak}[section]
+%\renewcommand{\theZDK}{\thesection\arabic{ZDK}}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+	{\textbf{Sveu\v{c}ili\v{s}te u Mostaru} \par}
+	{\textbf{Fakultet prirodoslovno-matemati\v{c}kih i odgojnih znanosti} \par}
+	\vspace{5cm}
+	{\Large{Stjepan Harapin \par}}
+	\vspace{3cm}
+	{\LARGE{\textbf{Statisti\v{c}ka fizika} \par}}
+	\vspace{1cm}
+	{Rje\v{s}enja zadataka \par}
+	\vfill
+	{Mostar, 2020.}
+\end{titlepage}
+
+\tableofcontents
+\setcounter{page}{1}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kineti\v{c}ka teorija plinova}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ZDK}
+	Uzimaju\'ci u obzir relativno gibanje molekula u plinu sastavljenom od $N$ jednakih molekula efektivnog udarnog presjeka $\sigma$, 
+	a koje se nalaze u volumenu $V$, izvedite izraz za \textit{srednji slobodni put}
+	$$ l = \frac{1}{n\ \sigma\ \sqrt{2}}\ . $$
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+
+
+
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Termodinamika}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ZDK}
+Neka pri ne suvi\v{s}e niskim temperaturama za $1\ mol$ realnog plina vrijedi jednad\v{z}ba stanja
+	$$ PV=RT-\frac{CP}{T^2} $$
+	gdje je C neka konstanta. \\
+	Izra\v{c}unajte termodinami\v{c}ke koeficijente $\alpha$, $\beta$, $\kappa$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Definiramo redom:
+\begin{itemize}
+	\item volumni koeficijent toplinskog rastezanja $\alpha$;
+	\item toplinski koeficijent tlaka $\beta$;
+	\item izotermni koeficijent kompresije $\kappa$.
+\end{itemize}
+
+$$ \alpha=\frac{1}{V} {\Big( \frac{\partial V}{\partial T}  \Big)}_P $$
+\\
+$$ \beta=\frac{1}{P} {\Big( \frac{\partial P}{\partial T}  \Big)}_V $$
+\\
+$$ \kappa=\frac{-1}{V} {\Big( \frac{\partial V}{\partial P}  \Big)}_T $$
+\\
+\textbf{Izvod za $\alpha$:}
+\\
+$$ PV=RT-\frac{CP}{T^2} \Big/ \frac{\partial}{\partial T}, \quad  P=konst. $$
+\\
+$$ P*\frac{\partial V}{\partial T}=R* \frac{\partial T}{\partial T} - CP* \frac{\partial T^{-2}}{\partial T} $$
+\\
+$$ P*\frac{\partial V}{\partial T}=R+CP*\frac{2}{T^3} \quad \Rightarrow \quad \frac{\partial V}{\partial T}=\frac{R}{P}+\frac{2C}{T^3} $$
+\\
+Sada ovaj izraz uvrstimo u izraz za volumni koeficijent toplinskog rastezanja $\alpha$:
+\\
+$$ \alpha=\frac{1}{V} \Big( \frac{R}{P}+\frac{2C}{T^3} \Big) $$
+\\
+Ubacimo $\frac{1}{V}$ unutar zagrada i izbacimo $\frac{1}{T}$ ispred:
+\\
+$$ \alpha=\frac{1}{T} \Big( \frac{RT}{PV}+\frac{2C}{VT^2} \Big) $$
+\\
+Po\v{c}etnu jednad\v{z}bu stanja za zadani realni plin svodimo na izraz za $\frac{RT}{PV}$:
+\\
+$$ \frac{RT}{PV}=\frac{C}{VT^2}+1 $$
+\\
+Taj izraz supstituiramo u na\v{s}u jednad\v{z}bu:
+\\
+$$ \alpha=\frac{1}{T} \Big( \frac{C}{VT^2}+\frac{2C}{VT^2}+1 \Big)  $$
+\\
+$$ \alpha=\frac{1}{T} \Big( 1+\frac{3C}{VT^2} \Big)  $$
+\\
+\textbf{Izvod za $\beta$:} \\
+\\
+$$ PV=RT-\frac{CP}{T^2} \Big/ \frac{\partial}{\partial T}, \quad  V=konst. $$
+\\
+$$ V*\frac{\partial P}{\partial T}=R-\frac{C}{T^2}*\frac{\partial P}{\partial T}+\frac{2CP}{T^3} $$
+\\
+$$ V\frac{\partial P}{\partial V}+\frac{C}{T^2}\frac{\partial P}{\partial T}=R+\frac{2CP}{T^3} $$
+\\
+$$ \frac{\partial P}{\partial T}=\frac{RT^3+2CP}{VT^3+CT} \Rightarrow \frac{\partial P}{\partial T}=\frac{R+\frac{2CP}{T^3}}{V+\frac{C}{T^2}} $$
+\\
+$$ \beta=\frac{1}{P} \frac{R+\frac{2CP}{T^3}}{V+\frac{C}{T^2}} \quad \Rightarrow \quad
+   \beta=\frac{\frac{R}{P}+\frac{2C}{T^3}}{V+\frac{C}{T^2}} \quad  \Big/ \frac{\frac{T}{V}}{\frac{T}{V}}
+   \quad \Rightarrow \quad 
+   \beta=\frac{\frac{RT}{PV}+\frac{2C}{VT^2}}{T+\frac{C}{VT}}
+$$   
+\\
+Ponovo kao i za $\alpha$ izrazimo $\frac{RT}{PV}$ iz zadane jednad\v{z}be za realni plin i uvrstimo:
+\\
+$$ \beta=\frac{1}{T} \Big( \frac{1+\frac{3C}{VT^2}}{1+\frac{C}{VT^2}} \Big) $$
+\\
+\textbf{Izvod za $\kappa$:} \\
+\\
+$$ PV=RT-\frac{CP}{T^2} \Big/ \frac{\partial}{\partial P}, \quad  T=konst. $$
+\\
+$$ V+P*\frac{\partial V}{\partial P}=-\frac{C}{T^2} $$
+\\
+$$ \frac{\partial V}{\partial P}=-\frac{C}{PT^2}-\frac{V}{P} $$
+\\
+Sada ovaj izraz uvrstimo u izraz za izotermni koeficijent kompresije $\kappa$:
+\\
+$$ \kappa=-\frac{1}{V} \Big( -\frac{C}{PT^2}-\frac{V}{P} \Big) $$
+\\
+Unutar zagrade ubacimo $\frac{-1}{V}$ i izbacimo $\frac{1}{P}$:
+\\
+$$ \kappa=\frac{1}{P} \Big( 1+ \frac{C}{VT^2} \Big) $$
+\\
+U granici $C=0$, u po\v{c}etnoj jednad\v{z}bi za realni plin dobijamo izraz za idealni plin pa se time i koeficijenti reduciraju na izraze 
+koji opisuju idealni plin: 
+\\
+$$ \alpha=\beta=\frac{1}{T}, \quad \kappa=\frac{1}{P} $$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	Mno\v{z}ina idealnog plina $z=3,6\ mol$ izobarno se ohladi sa $T_1=300K$ na $T_2=280K$. \\
+	Izra\v{c}unajte izgubljenu toplinu ako je molarni toplinski kapacitet plina pri konstantnom volumenu $2,5R$, gdje je $R$ plinska konstanta.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Kre\'cemo od relacije za toplinski kapacitet pri konstantnom volumenu:
+
+$$ C_V=\Big(\frac{\partial U}{\partial T}\Big)_V $$
+
+Tu relaciju uvr\v{s}tavamo u 1. zakon termodinamike:
+
+$$ d'Q=dU+pdV \quad  \Rightarrow \quad d'Q=C_VdT+pdV $$
+
+Za idealni plin pri konstantnom tlaku vrijedi:
+
+$$ pdV=zRdT  $$
+ 
+Po\v{s}to je zadan molarni toplinski kapacitet koji se odnosi na mol tvari, mno\v{z}imo ga sa koli\v{c}inom tvari koja je zadana u molovima:
+
+$$ C_V=2,5R*z $$
+
+Taj izraz, zajedno sa ostalim zadanim veli\v{c}inama, uvr\v{s}tavamo u modificirani 1.ZTD. i integriramo po temperaturi za koju nam je zadano po\v{c}etno i zavr\v{s}no stanje:
+
+$$ d'Q=C_VdT+zRdT \quad \Rightarrow \quad d'Q=(C_V+zR)dT \Big/ \int $$
+$$ Q=(C_V+zR)\int_{T_1}^{T_2}dT \quad \Rightarrow \quad Q=(C_V+zR)(T_2-T_1) $$
+$$ Q=(2,5*8,314\frac{J}{Kmol}*3,6 mol+3,6 mol*8,314\frac{J}{Kmol})*(280 K-300 K) $$
+$$ Q=104,76\frac{J}{K}*(-20 K) $$
+\\
+$$ Q=-2095,2 J $$
+\\
+Negativan predznak zna\v{c}i da plin gubi toplinu.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	U aproksimaciji idealnog plina izra\v{c}unajte koliku toplinu moramo predati plinu neona mase $M=1,5kg$ da bismo mu pri konstantnoj temperaturi
+	$T=400K$ udvostru\v{c}ili volumen. \\ 
+	Molarna masa neona jest $\mu=0,0202\frac{kg}{mol}$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Krenimo od 1.ZTD:
+
+$$ d'Q=dU+pdV \quad \Rightarrow \quad d'Q=C_VdT+pdV $$
+
+Po postavci zadatka imamo izotermni proces pa je promjena temperature jednaka nuli, tj. $dT=0$ odakle nam slijedi:
+
+$$ d'Q=pdV $$
+
+Po\v{s}to je zadan idealni plin, koristimo jednad\v{z}bu idealnog plina:
+
+$$ pV=zRT \quad \Rightarrow \Big[ z=\frac{M}{\mu} \Big] \Rightarrow \quad pV=\frac{M}{\mu}RT \quad \Rightarrow \quad p=\frac{M}{\mu}RT*\frac{1}{V} $$
+Integriramo po volumenu za koji imamo izra\v{z}enu promjenu kao $V_2=2V_1$:
+$$ d'Q=pdV \quad \Rightarrow \quad d'Q=\frac{MRT}{\mu}*\frac{dV}{V} \Big/ \int $$
+$$ Q=\frac{MRT}{\mu}\int_{V_1}^{V_2}\frac{dV}{V} \quad \Rightarrow \quad Q=\frac{MRT}{\mu}*(\ln{|V_2|-\ln{|V_1|}}) $$
+Uvr\v{s}tavamo poznate veli\v{c}ine, razliku logaritama zapisujemo kao razlomak i volumene izra\v{z}avamo preko dane relacije:
+$$ Q=\frac{1,5 kg*8,314\frac{J}{Kmol}*400 K}{0,0202\frac{kg}{mol}}*\ln{\Big| \frac{2V_1}{V_1}  \Big|} $$
+$$ Q=\frac{4988,4 J}{0,0202}*\ln{2} $$
+\\
+$$ Q=1,73*10^5 J $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	Zagrijavaju\'ci se izobarno, plin je primio toplinu $Q=84kJ$ i pritom pove\'cao svoju unutra\v{s}nju energiju za $\Delta U=60kJ$. \\
+	Primjenom modela idealnog plina izra\v{c}unajte omjer $\frac{C_P}{C_V}$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Ispi\v{s}imo 1.ZTD. i jednad\v{z}bu idealnog plina za zadani plin pri izobarnom zagrijavanju. \\
+Ukupna primljena toplina iz 1.ZTD:
+$$ Q=\Delta U+p \Delta V $$
+Jednad\v{z}ba idealnog plina pri promjeni volumena i temperature iz po\v{c}etnog u zavr\v{s}no stanje:
+$$ p\Delta V=zR \Delta T $$
+Iz relacije za toplinski kapacitet plina pri konstantnom volumenu izrazit \'cemo promjenu unutra\v{s}nje energije:
+$$ C_V=\Big(\frac{\partial U}{\partial T}\Big)_V \Rightarrow dU=C_V dT \Rightarrow \Delta U=C_V \Delta T $$
+Uvrstit \'cemo dobiveni rezultat u 1.ZTD:
+$$ Q=C_V \Delta T +zR \Delta T \quad \Rightarrow \quad Q=(C_V+zR)\Delta T $$
+Sada iz relacije $C_P=C_V+zR$ dobivamo za toplinu:
+$$Q=C_P \Delta T$$
+Izrazili smo oba kapaciteta preko poznatih veli\v{c}ina. Sada to uvrstimo u zadani omjer:
+\\
+\\
+$$ \frac{C_P}{C_V}=\frac{\frac{Q}{\Delta T}}{\frac{\Delta U}{\Delta T}}=\frac{Q}{\Delta U}=\frac{84kJ}{60kJ}=1,4 $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	Iz po\v{c}etnog stanja sa tlakom $p_1=25kPa$ i volumenom $V_1=0,2m^3$, idealni plin je izotermno pove\'cao svoj tlak na vrijednost $p_2=30kPa$. \\
+	Koliki je rad u promatranom procesu?
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Rad idealnog plina u izotermnom procesu je zadan izrazom:
+$$ W=\int_{1}^{2}pdV  $$
+Iz jednad\v{z}be stanja idealnog plina dobivamo izraz za tlak: 
+$$ pV=zRT \quad \Rightarrow \quad p=\frac{zRT}{V} $$
+Uvrstimo tlak u izraz za rad i rije\v{s}imo integral:
+$$ W=zRT*\int_{V_1}^{V_2}\frac{dV}{V} \quad \Rightarrow \quad W=zRT*\ln{\Big| \frac{V_2}{V_1}  \Big|} $$
+Iz jednad\v{z}be stanja izotermnih procesa dobivamo:
+$$p_1 V_1=p_2 V_2 \quad \Rightarrow \quad \frac{V_2}{V_1}=\frac{p_1}{p_2} $$
+$$ W=p_1 V_1 *\ln{\frac{p_1}{p_2}} $$
+Uvrstimo poznate vrijednosti:
+$$ W=25*{10}^3kPa*0,2m^3*\ln{\frac{25kPa}{30kPa}} $$
+\\
+$$ W=-911,6J $$
+Negativni predznak zna\v{c}i da rad nije obavio plin, nego su ga obavile vanjske sile.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	Promatraju\'ci termodinami\v{c}ki proces u kojemu je tlak proporcionalan s volumenom, odredite rad ako je u po\v{c}etnom stanju
+	$p_1=2,3MPa$, $V_1=4,4m^3$, a u kona\v{c}nom stanju $p_2=3,7MPa$, $V_2=6,5m^3$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+
+ \begin{figure}[h!]
+        \centering
+	\includegraphics[scale=0.3]{slika1.png}
+ \end{figure}
+Iznos rada termodinami\v{c}kog procesa jednak je povr\v{s}ini ispod grafa \v{s}to ga \v{c}ini tra\v{z}eni proces u $p-V$ dijagramu. \\
+Povr\v{s}inu vidimo na slici povi\v{s}e. Mo\v{z}emo je podijeliti na dva dijela. Prvi dio \v{c}ini pravokutnik duljina stranica 
+$(V_2-V_1)$ i $(p_1-0)$, a drugi dio trokut osnovice duljine $(V_2-V_1)$ i visine $(p_2-p_1)$. \\
+\newline
+Zbroj povr\v{s}ina nam daje tra\v{z}eni rad:
+
+$$ W=p_1*(V_2-V_1) \quad + \quad \frac{(V_2-V_1)*(p_2-p_1)}{2} $$
+$$ W=(V_2-V_1)*\Big[ p_1+\frac{p_2-p_1}{2}  \Big]=2,1m^3*3MPa $$
+\\
+$$ W=6,3MJ $$
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	$P-V$ dijagram kru\v{z}nog procesa, u kojem sustav prima toplinu od okoline, ima oblik elipse. \\
+	Koliko puta moramo ponoviti ciklus da bi sveukupna primljena toplina bila $\Delta Q=2,826 MJ$ ako je razlika
+	izme\dj u maksimalnoga i minimalnoga tlaka $\Delta p=48 kPa$, a maksimalnoga i minimalnoga volumena $\Delta V=1,5m^3$. \\
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+
+ \begin{figure}[h!]
+        \centering
+	\includegraphics[scale=0.4]{slika2.png}
+ \end{figure}
+
+Nakon svakog ciklusa sustav je u stanju po\v{c}etne unutra\v{s}nje energije, pa je prema 1.Z.TD. primljena toplina jednaka obavljenom radu. \\
+Rad u jednom ciklusu broj\v{c}ano je jednak povr\v{s}ini elipse.\\
+\newline
+Povr\v{s}inu elipse ra\v{c}unamo po formuli
+$$ P=a*b*\pi $$
+gdje su a i b duljine velike i male poluosi elipse. \\
+Iz slike slijedi:
+$$ W_0=\frac{\Delta p}{2}*\frac{\Delta V}{2}*\pi $$
+-u $n$ ciklusa sustav prima toplinu koja je n puta ve\'ca: $Q=n*W_0$
+$$ n=\frac{Q}{W_0} \quad \Rightarrow \quad n=\frac{4*Q}{\Delta p*\Delta V*\pi} \quad \Rightarrow \quad n=\frac{4*2,826*10^6J}{48*10^3J*1,5m^3*\pi} $$
+\\
+$$ n=49,97 \approx 50 $$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	Odredite izraz za molarni toplinski kapacitet idealnog plina u procesu u kojem je tlak plina proporcionalan s volumenom:
+	$$ p=a*V $$
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Molarni toplinski kapacitet odrediti \'cemo iz izraza : $C=\frac{d'Q}{dT}$
+\\
+\newline
+1.Z.TD. za idealne plinove: 
+$$ d'Q=dU+pdV \quad \Big| \quad dU=C_VdT $$
+$$ d'Q=C_VdT+aVdV \quad \Big| \quad dV^2=2VdV \Rightarrow \frac{dV^2}{2V}=dV $$
+\\
+$$ d'Q=C_VdT+ \frac{a}{2}dV^2  $$
+\\
+Jednad\v{z}ba stanja $1\ mola$ idealnog plina:
+$$ pV=RT \quad \Rightarrow \quad  a*V*V=RT \quad \Rightarrow \quad aV^2=RT \quad \Rightarrow \quad adV^2=RdT $$
+Uvrstimo u dobiveni izraz za 1.Z.TD:
+$$ d'Q=C_VdT+\frac{1}{2}RdT \quad \Rightarrow \quad d'Q=\Big( C_V+\frac{R}{2} \Big)dT $$
+\\
+Uspore\dj uju\'ci dobiveni izraz sa izrazom $C=\frac{d'Q}{dT} $, dobijemo izraz za $C$:
+$$ C=C_V+\frac{R}{2} $$
+Znamo da vrijedi jednakost: $C_p-C_V=R$ 
+\\
+$$ C=C_V+\frac{1}{2}(C_p-C_V) $$
+\\
+$$ C=\frac{C_p+C_V}{2} $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	Idealni plin koji sadr\v{z}i $N$ molekula prelazi iz po\v{c}etnog stanja $1$ u kona\v{c}no stanje $2$. \\
+	Odredite izraz za promjenu entropije plina i primjenite ga u IZOBARNIM, IZOTERMNIM i IZOHORNIM procesima.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Za idealni plin vrijedi:
+$$ dU=C_VdT, \quad pV=NkT \Rightarrow p=\frac{NkT}{V}, \quad TdS=dU+pdV $$
+Uvr\v{s}tavamo u osnovnu relaciju termodinamike za sustave u termi\v{c}koj ravnote\v{z}i:
+$$ dS=C_V\frac{dT}{T}+Nk\frac{dV}{V} \quad \Big/ \int $$
+$$ S_2-S_1=C_V \ln{ \Big| \frac{T_2}{T_1} \Big|} +Nk \ln{ \Big| \frac{V_2}{V_1} \Big|} $$
+\\
+IZOBARNI PROCESI:
+\\
+$$ \frac{V_2}{V_1}=\frac{T_2}{T_1}, \quad C_p=C_V+Nk $$
+$$ S_2-S_1=C_p \ln{\frac{T_2}{T_1}} $$
+\\
+IZOHORNI PROCESI:
+\\
+$$ V_2=V_1 $$
+$$ S_2-S_1=C_V \ln{\frac{T_2}{T_1}} $$
+\\
+IZOTERMNI PROCESI:
+\\
+$$ T_2=T_1 $$
+$$ S_2-S_1=Nk \ln{\frac{V_2}{V_1}} $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	U izotermnom procesu volumen plina promijenio se od po\v{c}etne vrijednosti $V_1$ do kona\v{c}ne vrijednosti $V_2$. \\
+	Odredite promjenu unutra\v{s}nje energije ako plin zadovoljava jednad\v{z}bu stanja:
+	$$ pV=NkT \Big[ 1+\frac{N}{V}B(T) \Big] $$
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Termodinami\v{c}ka relacija:
+$$ p+\Big( \frac{\partial U}{\partial V}  \Big)_T=T \Big( \frac{\partial p}{\partial T}  \Big)_V $$
+Deriviramo jednad\v{z}bu stanja po temperaturi $T$:
+$$ V*\Big( \frac{\partial p}{\partial T} \Big)_V=Nk \Big[ 1+\frac{N}{V}B(T) \Big] +NkT \Big[ \frac{N}{V}\frac{dB(T)}{dT} \Big]$$
+$$ \Big( \frac{\partial p}{\partial T} \Big)_V=\frac{Nk}{V} \Big[ 1+\frac{N}{V}B(T) \Big] +kT \Big( \frac{N}{V}  \Big)^2 \frac{dB(T)}{dT} $$
+\\
+Uvr\v{s}tavamo u termodinami\v{c}ku jednad\v{z}bu:
+$$ \Big( \frac{\partial U}{\partial V} \Big)_T=\frac{NkT}{V} \Big[ 1+\frac{N}{V}B(T) \Big] +k \Big( \frac{NT}{V}  \Big)^2 \frac{dB(T)}{dT}-p, \quad gdje\ je \quad
+p=\frac{NkT}{V} \Big[ 1+\frac{N}{V}B(T) \Big] $$
+Nakon kra\'cenja, dobijamo:
+$$ \Big( \frac{\partial U}{\partial V} \Big)_T=k \Big( \frac{NT}{V}  \Big)^2* \frac{dB(T)}{dT} $$
+\\
+IZOTERMNI PROCES: $T=konst.$
+\\
+$$ V_1 \rightarrow V_2, \quad \Delta U=U(V_2,T)-U(V_1,T) $$
+\\
+$$ \frac{\partial U}{\partial V} = k(NT)^2* \frac{dB(T)}{dT} \Big( \frac{1}{V^2} \Big) $$
+\\
+$$ dU= k(NT)^2* \frac{dB(T)}{dT} \frac{dV}{V^2} \quad \Big/ \int $$
+\\
+$$ U=k(NT)^2* \frac{dB}{dT} \Big( -\frac{1}{V} \Big) $$
+\\
+\newline
+Dobili smo izraz za $U$ u koji mo\v{z}emo uvrstiti po\v{c}etno i zavr\v{s}no stanje:
+\\
+$$ U(V_2,T)-U(V_1,T)=k(NT)^2* \frac{dB(T)}{dT} \Big[ \frac{-1}{V_2}- \Big( \frac{-1}{V_1} \Big) \Big] $$
+\\
+$$ \Delta U=k(NT)^2* \frac{dB(T)}{dT} \Big[ \frac{1}{V_1}-\frac{1}{V_2} \Big] $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	Tlak elektromagnetskog polja povezan je s gusto\'com energije relacijom 
+	$$ p=\frac{u}{3}. $$
+	Izvedite zakon zra\v{c}enja crnog tijela.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+$u$ - gusto\'ca energije 
+\\
+$U$ - ukupna energija
+\\
+\\
+Te su veli\v{c}ine povezane relacijom: $u=\frac{U}{V}$
+\\
+\\
+Krenimo od termodinami\v{c}ke relacije:
+$$ \Big( \frac{\partial U}{\partial V}  \Big)_T +p=T \Big( \frac{\partial p}{\partial T}  \Big)_V $$
+\\
+$$ u+\frac{u}{3}=T*\frac{du}{dT}*\frac{1}{3} $$
+\\
+$$ \frac{4u}{3du}=\frac{T}{3dT} \quad \Rightarrow \quad \frac{4u}{du}=\frac{T}{dT} $$
+\\
+$$ \frac{du}{4u}=\frac{dT}{T} \quad \Big/ \int $$
+\\
+$$ \ln{|u|}=4 \ln{|T|}+C \quad \Big/ ^e \quad \Rightarrow \quad e^{\ln{|u|}}=e^C e^{4*\ln{|T|}} $$
+\\
+Supstituiramo integracijsku konstantu: $a=e^C$
+\\
+$$ u=aT^4 $$
+\\
+Uvr\v{s}tavaju\'ci izraz $u=\frac{U}{V}$, dobijamo \textbf{Stefan-Boltzmanov zakon zra\v{c}enja crnog tijela}
+koji predstavlja ukupnu energiju zra\v{c}enja u volumenu $V$:
+\\
+$$ U=aVT^4 $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{ZDK}
+	Neka je poznata slobodna energija kao funkcija temperature, volumena i broja \v{c}estica. \\
+	Odredite izraz za kemijski potencijal sustava $\mu$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+U termi\v{c}koj ravnote\v{z}i, osnovna relacija termodinamike za sustave varijabilnog broja \v{c}estica jest:
+$$ TdS=dU+pdV-\mu dN $$
+\\
+Slobodna energija je zadana izrazom:
+$$ F=U-TS $$
+Prebacimo je u diferencijalni oblik:
+$$ dF=dU-TdS-SdT $$
+$$ dF=dU-dU-pdV+\mu dN-SdT $$
+$$ dF=\mu dN-pdV-SdT $$
+\\
+Budu\'ci je $dF$ totalni diferencijal, mora vrijediti:
+$$ p=-\Big( \frac{\partial F}{\partial V} \Big)_{N,T} \quad , \quad S=-\Big( \frac{\partial F}{\partial T} \Big)_{N,V} \quad , \quad
+\mu =\Big( \frac{\partial F}{\partial N} \Big)_{V,T} $$
+\\
+Dobili smo Maxwellove relacije. \\
+U prve dvije promatramo sustave konstantnog broja \v{c}estica. Tre\'ca nam daje tra\v{z}enu vezu kemijskog potencijala sa slobodnom energijom.
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Klasi\v{c}na statisti\v{c}ka fizika}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Koliko atoma u molu plina helija na temperaturi $T=450K$ ima brzinu izme\dj u $v_1$ i $v_2$, gdje su  $v_1=800\frac{m}{s}$, $v_2=804\frac{m}{s}$. \\
+	Masa atoma helija jest $m_{He}=6,65*{10}^{-27}kg$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Raspodjela atoma (\v{c}estica) prema iznosu brzine odre\dj ena je funkcijom $P(v^2)$. Tu funkciju nazivamo \textit{funkcijom Maxwellove raspodjele}. \\
+Ona nam daje vjerojatnost da se \v{c}estica, u ovom slu\v{c}aju atom, na\dj e u nekom intervalu brzina. \\
+Skup \v{c}estica kojeg promatramo je $1\ mol$ atoma u plinu helija, tj. $Avogadrov\ broj\ N_A$ atoma helija ima brzinu distribuiranu po Maxwellovoj raspodjeli.
+Mno\v{z}e\'ci ukupan broj atoma sa vjerojatnosti nala\v{z}enja atoma u danom intervalu brzine, dobit \'cemo broj atoma koji se nalazi u tom intervalu. \\
+\\
+To zapisujemo na sljede\'ci na\v{c}in:
+$$ N=N_A * \int_{v_1}^{v_2}P(v^2)dv \quad, $$
+gdje je
+$$ P(v^2)=4\pi \Big( \frac{m}{2\pi kT} \Big)^{\frac{3}{2}}*v^2*e^{-\frac{mv^2}{2kT}} \quad. $$
+\\
+Uvr\v{s}tavaju\'ci u izraz funkciju Maxwellove raspodjele i poznate veli\v{c}ine, dobijamo rje\v{s}enje.
+\\
+$$ N=N_A*4\pi \Big( \frac{m}{2\pi kT} \Big)^{\frac{3}{2}}*\int_{v_1}^{v_2} v^2e^{-\frac{mv^2}{2kT}}dv $$
+\\
+\textbf{Aproksimacija integrala:} \\
+Odre\dj eni integral nam predstavlja povr\v{s}inu ispod krivulje ome\dj enu granicama integracije. Kad je razlika me\dj u granicama dovoljno mala,
+integral mo\v{z}emo aproksimirati pravokutnikom ispod krivulje \v{c}ija je jedna stranica definirana tim granicama, a druga stranica srednjom vrijednosti funkcije 
+me\dj u tim granicama. \\
+$$ \int_{a}^{b}f(x)dx \approx (b-a)f(c), \quad c \in [a,b]  $$
+\newpage
+Za to\v{c}ku $c \in [v_1,v_2]$ \'cemo uzeti $\overline{v}=\frac{v_1+v_2}{2}$.
+\\
+\\
+$$ \int_{v_1}^{v_2} v^2e^{-\frac{mv^2}{2kT}}dv \approx (v_2-v_1) * \Big( \frac{v_1+v_2}{2}^2 \Big) * e^{-m\frac{\big(\frac{v_1+v_2}{2}\big)^2}{2kT}} $$
+\\
+\\
+Dobijamo kona\v{c}an oblik:
+\\
+\\
+$$ N=N_A*4\pi \Big( \frac{m}{2\pi kT} \Big)^{\frac{3}{2}}* (v_2-v_1) * \Big( \frac{v_1+v_2}{2}^2 \Big) * e^{-m\frac{(v_1+v_2)^2}{8kT}} $$
+\\
+\\
+$$ N=6,022*10^{23}mol^{-1}*4\pi*\Big( \frac{6,65*10^{-27}kg}{2\pi*450K*1,38*10^{-23}JK^{-1}} \Big)^{\frac{3}{2}}*...$$
+\\
+$$ ...*(4ms^{-1})*643204m^2s^{-2}*e^{-\frac{4,28*10^{-21}kgm^2s^{-2}}{1,245*10^{-20}J}} $$
+\\
+\\
+$$ N=9,744*10^{20}\frac{1}{mol} $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Kolika je vjerojatnost da su u plinu du\v{s}ika na temperaturi $0^{\circ}C$ iznosi svih triju Cartesiusovih komponenti translacijske molekulske brzine
+	u intervalu izme\dj u $v_1=400\frac{m}{s}$ i $v_2=500\frac{m}{s}$. \\
+	Masa molekule du\v{s}ika jest $m=4,65*10^{-26}kg$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Za razliku od pro\v{s}log zadatka, ovdje tra\v{z}imo vjerojatnost nala\v{z}enja \v{c}estice u intervalu brzine u svakoj komponenti zasebno. \\
+Vjerojatnost da \v{c}estica ima $x$ komponentu translacijske brzine izme\dj u $v_1$ i $v_2$ je dana izrazom:
+\\
+$$ w_x=2*\int_{v_1}^{v_2}f({v_x}^2)dv_x, \quad gdje\ je \quad f({v_x}^2)=\sqrt{\frac{m}{2 \pi kT}}*e^{-\frac{m{v_x}^2}{2kT}} $$
+\\
+Integral za tra\v{z}enu vjerojatnost mno\v{z}imo sa $2$ po\v{s}to na osi $x$ imamo pozitivnu i negativnu brzinu. U ovom slu\v{c}aju gledamo 
+apsolutan iznos brzine tako da nam negativna komponenta predstavlja samo suprotan smjer.
+\\
+\\
+U zadatku tra\v{z}imo vjerojatnost da se sve tri komponente na\dj u u tra\v{z}enom intervalu. \\
+Znamo da je gibanje \v{c}estice u jednoj komponenti neovisno o gibanju u druge dvije komponente.
+Vjerojatnost skupa nezavisnih doga\dj aja dobivamo mno\v{z}enjem vjerojatnosti tih doga\dj aja zasebno:
+$$ w=w_x*w_y*w_z $$
+Pretpostavljamo jo\v{s} da su vjerojatnosti za sve komponentne jednake, tj:
+$$ w_x=w_y=w_z \quad \rightarrow \quad w=(w_x)^3=(w_y)^3=(w_z)^3 $$
+\\
+Dobivamo kona\v{c}an oblik tra\v{z}ene vjerojatnosti:
+\\
+\\
+$$ w=(w_x)^3=\left[ 2*\sqrt{\frac{m}{2 \pi kT}}* \int_{v_1}^{v_2} e^{-\frac{m{v_x}^2}{2kT}}dv_x \right]^3  $$
+\newpage
+Uvedimo supstituciju:
+\\
+$$ t=\sqrt{\frac{m{v_x}^2}{2kT}}, \quad t^2=\frac{m{v_x}^2}{2kT}, \quad dt=\sqrt{\frac{m}{2kT}}dv_x $$
+\\
+$$ w_x=\frac{2}{\sqrt{\pi}}*\sqrt{\frac{m}{2kT}}*\sqrt{\frac{2kT}{m}}*\int_{t_1}^{t_2}e^{{-t}^2}dt $$
+\\
+$$ w_x=\frac{2}{\sqrt{\pi}}*\int_{t_1}^{t_2}e^{{-t}^2}dt $$
+\\
+Da bismo rije\v{s}ili ovaj integral, uvodimo funkciju $\Phi(x)$ oblika: 
+$$ \Phi(x)=\frac{2}{\sqrt{\pi}}*\int_{o}^{x}e^{{-t}^2}dt $$
+Rje\v{s}enja ove funkcije za vrijednosti varijable $x$ su dane u tablici koja se mo\v{z}e na\'ci u \v{S}ipsu\cite{statisticka} i tako\dj er je dana na kraju ove skripte.
+\\
+$$ t=\sqrt{\frac{m{v_x}^2}{2kT}} \rightarrow t=\sqrt{\frac{4,65*10^{-26}kg}{2*1,38*10^{-23}JK^{-1}*273,15K}}*v $$
+\\
+$$ t_1=0,994 \quad,\quad t_2=1,241 $$
+\\
+$$ w_x=\Phi(1,241)-\Phi(0,994) $$
+\\
+$$ w_x=0,081 $$
+\\
+$$ w=(w_x)^3=(0,081)^3=0,00053 $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Da li je ve\'ca vjerojatnost da je iznos x-komponente translacijske molekulske brzine izme\dj u 
+	najvjerojatnije i srednje brzine ili srednje i srednje kvadratne brzine?
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+$v_m$ - najvjerojatnija brzina \\
+$\overline{v}$ - srednja brzina \\
+$v_s$ - srednja kvadratna brzina \\
+\\
+$$ v_m=\sqrt{\frac{2kT}{m}} \quad;\quad \overline{v}=\sqrt{\frac{8kT}{\pi m}} \quad;\quad v_s=\sqrt{\frac{3kT}{m}} $$
+\\
+Kao i u pro\v{s}lom zadatku, vjerojatnost da je iznos x-komponente brzine izme\dj u $v_m$ i $\overline{v}$ jest:
+$$ \omega_1=2*\int_{v_m}^{\overline{v}}f({v_x}^2)dv_x $$
+Da je iznos x-komponente brzine izme\dj u $\overline{v}$ i $v_s$:
+$$ \omega_2=2*\int_{\overline{v}}^{v_s}f({v_x}^2)dv_x $$
+\\
+Rje\v{s}avamo integrale i uspore\dj ujemo dobivene vjerojatnosti. \\
+U pro\v{s}lom smo zadatku objasnili kako rije\v{s}iti ovaj integral tako da ovdje direktno ra\v{c}unamo vrijednosti
+supstitucijske varijable $t$ i uvr\v{s}tavamo u funkciju $\Phi$.
+$$ t=\sqrt{\frac{m{v_x}^2}{2kT}} $$
+\\
+$$ t_m=\sqrt{\frac{m}{2kT}}*\sqrt{\frac{2kT}{m}} \Rightarrow t_m=1 $$
+\\
+$$ \overline{t}=\sqrt{\frac{m}{2kT}}*\sqrt{\frac{8kT}{\pi m}} \Rightarrow \overline{t}=\frac{2}{\sqrt{\pi}}=1,128 $$
+\\
+$$ t_s=\sqrt{\frac{m}{2kT}}*\sqrt{\frac{3kT}{m}} \Rightarrow t_s=1,225 $$
+\newpage
+$$ \omega_1=\frac{2}{\sqrt{\pi}}*\int_{1}^{1,128}e^{{-t}^2}dt $$
+\\
+$$ \omega_1=\Phi(1,128)-\Phi(1)=0,0467 $$
+\\
+\\
+$$ \omega_2=\frac{2}{\sqrt{\pi}}*\int_{1,128}^{1,225}e^{{-t}^2}dt $$
+\\
+$$ \omega_2=\Phi(1,225)-\Phi(1,128)=0,0271 $$
+\\
+Uspore\dj uju\'ci dobivene vjerojatnosti $\omega_1$ i $\omega_2$ vidimo da je $\omega_1 > \omega_2$, tj.
+vjerojatnost da je iznos x-komponente translacijske brzine izme\dj u najvjerojatnije i srednje brzine ve\'ci je  
+od vjerojatnosti da je izme\dj u srednje i srednje kvadratne brzine. 
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Za plin u kojem vrijedi Maxwellova raspodjela molekula prema brzinama, izra\v{c}unajte omjer 
+	$$ \overline{\Big( \frac{1}{v} \Big)}:\frac{1}{\overline{v}} \quad . $$
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+$$ \overline{v}=\sqrt{\frac{8kT}{\pi m}} \quad \Rightarrow \quad \frac{1}{\overline{v}}=\sqrt{\frac{\pi m}{8kT}} $$
+\\
+Srednju vrijednost dobivamo tako da promatranu veli\v{c}inu pomno\v{z}imo s vjerojatno\v{s}\'cu, a dobiveni umno\v{z}ak integriramo po cijelom podru\v{c}ju. \\
+$$ \overline{v}=\int_{0}^{\infty}v*P(v^2)dv $$
+Primjenjuju\'ci taj izraz na tra\v{z}eni razlomak, dobijamo:
+$$ \overline{\Big( \frac{1}{v} \Big)}=\int_{0}^{\infty}\Big( \frac{1}{v} \Big)*P(v^2)dv $$
+$$ \overline{\Big( \frac{1}{v} \Big)}=4\pi*\Big( \frac{m}{2\pi kT} \Big)^{\frac{3}{2}}*\int_{0}^{\infty}\frac{1}{v}*v^2*e^{-\frac{mv^2}{2kT}}dv $$
+\\
+SUPSTITUCIJA: \\
+\\
+$$ \sqrt{\frac{m}{2kT}}v=t \quad,\quad v=\sqrt{\frac{2kT}{m}}t \quad,\quad \sqrt{\frac{m}{2kT}}dv=dt \quad,\quad dv=\sqrt{\frac{2kT}{m}}dt $$
+\\
+$$ \overline{\Big( \frac{1}{v} \Big)}=4\pi*\Big( \frac{m}{2\pi kT} \Big)^{\frac{3}{2}}*\sqrt{\frac{2kT}{m}}*\sqrt{\frac{2kT}{m}}*\int_{0}^{\infty}t*e^{-t^2}dt
+\footnote{Postupak rje\v{s}avanja ovog integrala je izveden na kraju skripte.}$$
+\\
+\\
+Po\v{s}to znamo rje\v{s}enje ovog integrala, sre\dj uju\'ci izraz, dobijamo:
+\\
+$$ \overline{\Big( \frac{1}{v} \Big)}=\sqrt{\frac{2m}{\pi kT}} $$
+\newpage
+Sada tra\v{z}imo omjer dobivenih veli\v{c}ina:
+\\
+\\
+$$ \frac{\overline{\Big(\frac{1}{v}\Big)}}{\frac{1}{\overline{v}}}=\frac{\sqrt{\frac{2m}{\pi kT}}}{\sqrt{\frac{\pi m}{8kT}}}=\sqrt{\frac{\frac{2}{\pi}}{\frac{\pi}{8}}} $$
+\\
+\\
+$$ \frac{\overline{\Big(\frac{1}{v}\Big)}}{\frac{1}{\overline{v}}}=\frac{4}{\pi} $$
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Odredite vjerojatnost da se projekcija translacijske brzine molekule na $x-y$ ravnini nalazi izme\dj u najvjerojatnije i srednje kvadratne brzine.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Tra\v{z}ena vjerojatnost \'ce biti:
+\\
+$$ \omega=\frac{\int_{v_m}^{v_s}e^{-\frac{mu^2}{2kT}}*u*du}{\int_{0}^{\infty}e^{-\frac{mu^2}{2kT}}*u*du} $$
+\\
+SUPSTITUCIJA: \\
+\\
+$$ \frac{mu^2}{2kT}=t \quad,\quad \frac{m}{2kT}2udu=dt \quad,\quad udu=\frac{kT}{m}dt $$
+\\
+Granice za integral u brojniku: 
+$$ t_1=\frac{m}{2kT}*\frac{2kT}{m}=1 \quad,\quad t_2=\frac{m}{2kT}*\frac{3kT}{m}=\frac{3}{2} $$
+\\
+Granice za integral u nazivniku:
+$$ t_3=\frac{m}{2kT}*0=0 \quad,\quad t_4=\frac{m}{2kT}*\infty=\infty $$
+\\
+$$ \omega=\frac{\frac{kT}{m}*\int_{1}^{\frac{3}{2}}e^{-t}dt}{\frac{kT}{m}*\int_{0}^{\infty}e^{-t}dt} $$
+\\
+\\
+Po\v{s}to je rje\v{s}enje integrala $\int e^{-t}dt=-e^{-t}+C$, dobivamo sljede\'ci izraz za tra\v{z}enu vjerojatnost:
+\\
+$$ \omega=\frac{-e^{-\frac{3}{2}}-(-e^{-1})}{-e^{-\infty}-(-e^{-0})}=\frac{\frac{1}{e^{\frac{3}{2}}}-\frac{1}{e}}{0-1} $$
+\\
+$$ \omega=\frac{1}{e}-\frac{1}{e^{\frac{3}{2}}}=0,144 $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Neka se molekule jednoatomnog idealnog plina gibaju u ravnini. \\
+	Odredite relativan broj molekula kojima je energija ve\'ca od $kT$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Relativan broj molekula ozna\v{c}avamo sa $\frac{\Delta N}{N}$ gdje je $N$ ukupan broj molekula, a $\Delta N$ broj molekula sa danim svojstvom. \\
+Drugim rije\v{c}ima, tra\v{z}imo udio molekula sa brzinom ve\'com od $kT$ u skupu molekula sa svim mogu\'cim brzinama.
+\\
+$$ E>kT \quad , \quad kT=\frac{m{v_0}^2}{2} $$
+\\
+$$ N=N_A4\pi \Big( \frac{m}{2\pi kT} \Big)^{\frac{3}{2}}\ \int_{v_1}^{v_2}v^2\ e^{-\frac{mv^2}{2kT}}\ dv $$
+\\
+Konstante ispred integrala se krate i time dobivamo sljede\'ci oblik:
+\\
+$$ \frac{\Delta N}{N}\ =\ \frac{\int_{v_0}^{\infty}\ e^{-\frac{mv^2}{2kT}}\ v\ dv}{\int_{0}^{\infty}\ e^{-\frac{mv^2}{2kT}}\ v\ dv} $$
+\\
+SUPSTITUCIJA: \\
+\\
+$$ \frac{mv^2}{2kT}=t \quad,\quad \frac{m}{2kT}\ 2vdv=dt \quad,\quad vdv=\frac{kT}{m}\ dt $$
+\\
+Granice za integral u brojniku: 
+$$ t_1=\frac{m}{2kT}*\frac{2kT}{m}=1 \quad,\quad t_2=\frac{m}{2kT}*\infty=\infty $$
+\\
+Granice za integral u nazivniku:
+$$ t_3=\frac{m}{2kT}*0=0 \quad,\quad t_4=\frac{m}{2kT}*\infty=\infty $$
+\\
+$$ \frac{\Delta N}{N}\ =\ \frac{\frac{kT}{m}\ \int_{1}^{\infty}\ e^{-t}\ dt}{\frac{kT}{m}\ \int_{0}^{\infty}\ e^{-t}\ dt} $$
+\\
+\\
+Po\v{s}to je rje\v{s}enje integrala $\int e^{-t}dt=-e^{-t}+C$, dobivamo sljede\'ci izraz za relativan broj molekula kojima je energija ve\'ca od $kT$:
+\\
+$$ \frac{\Delta N}{N}\ =\ \frac{-e^{-\infty}-(-e^{-1})}{-e^{-\infty}-(-e^{-0})}\ =\ \frac{0-\frac{1}{e}}{0-1} $$
+\\
+$$ \frac{\Delta N}{N}\ =\ \frac{1}{e}\ =\ 0,3678 $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Temperatura na povr\v{s}ini Sunca pribli\v{z}no je $6000K$. \\
+	Mogu li na tako visokoj temperaturi atomi vodika u ve\'coj mjeri napu\v{s}tati Sunce? \\
+	\\
+	$Masa\ vodika:\ m=1,66*10^{-27}\ kg$ \\
+	$Masa\ Sunca:\ M=1,97*10^{30}\ kg $ \\
+	$Radijus\ Sunca:\ 6,95*10^8\ m $
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Brzina potrebna da tijelo (u ovom slu\v{c}aju atom) napusti nebeski objekt zove se \textbf{2. Kozmi\v{c}ka brzina}. \\
+Iz Maxwellove raspodjele mo\v{z}emo dobiti srednju brzinu atoma pri nekoj temperaturi. 
+Usporedbom tih brzina procijenjujemo vjerojatnost da atom vodika napusti Sunce. 
+\\
+\\
+IZVOD 2. KOZMI\v{C}KE BRZINE: \\
+\\
+Kre\'cemo od potencijalne energije izme\dj u u na\v{s}eg tijela i nebeskog objekta koju izjedna\v{c}avamo sa kineti\v{c}kom energijom tijela:
+\\
+$$ E_G\ =\ G\ \frac{m\ M}{R} \quad \Rightarrow \quad \frac{m{v_0}^2}{2}\ =\ G\ \frac{m\ M}{R} \quad \Rightarrow \quad {v_0}^2\ =\ G\ \frac{2M}{R} $$
+\\
+$$ \boldsymbol{v_s}\ =\ \sqrt{\frac{2GM}{R}} $$
+\\
+\\
+Sada ra\v{c}unamo 2. Kozmi\v{c}ku brzinu i srednju brzinu atoma vodika na Suncu:
+\\
+$$ v_s\ =\ \sqrt{\frac{2GM}{R}}\ =\ \sqrt{\frac{2*6,674*10^{-11}\ \frac{m^3}{kg\ s^2}\ *\ 1,97*10^{30}\ kg}{6,95*10^8\ m}}\ =\ 615,1\ \frac{km}{s} $$
+\\
+$$ \overline{v}\ =\ \sqrt{\frac{8kT}{\pi m}}\ =\ \sqrt{\frac{8\ *\ 1,38*10^{-23}\ \frac{J}{K}\ *\ 6000\ K}{\pi\ *\ 1,66*10^{-27}\ kg}}\ =\ 11,3\ \frac{km}{s} $$
+\\
+Iako je dobivena srednja brzina velika brzina za atome, ona je jo\v{s} uvijek jedno 55 puta manja od brzine potrebne za napu\v{s}tanje Sunca. \\
+Stoga je emisija atoma vodika sa Sunca slaba.
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+		Na plin istovrsnih molekula, koje se nalaze u beskona\v{c}no visokom cilindru, djeluje gravitacijska sila. \\
+		Pretpostavljaju\'ci da je na svim visinama temperatura jednaka $10^{\circ}C$, odredite molekulsku masu ako je te\v{z}i\v{s}te plina na visini 
+		$\overline{x}\ =\ 30\ km$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Potencijalna energija molekule na visini $x$ je jednaka:
+$$ E_p\ =\ mgx $$ 
+U zadatku imamo zadanu distribuciju molekula kroz cilindar s obzirom na gravitacijsku potencijalnu energiju. \\
+Te\v{z}i\v{s}te plina u tom slu\v{c}aju predstavlja prosje\v{c}nu vrijednost pomaka molekule u potencijalnom polju. \\
+Prosje\v{c}nu vrijednost izra\v{z}avamo na sljede\'ci na\v{c}in: \\
+$$ \overline{A}\ =\ \frac{\int\ Ae^{-\beta E}\ d\phi}{\int\ e^{-\beta E}\ d\phi} $$
+\\
+U dani izraz uvr\v{s}tavamo potencijalnu energiju i integriramo po cijelom cilindru, \v{s}to je od $0$ do $\infty$:
+$$ \overline{x}\ =\ \frac{\int_{0}^{\infty}\ x\ e^{-\frac{mgx}{kT}}\ dx}{\int_{0}^{\infty}\ e^{-\frac{mgx}{kT}}\ dx} $$
+\\
+\\
+Integral u nazivniku rje\v{s}avamo obi\v{c}nom supstitucijom:
+$$ \frac{mg}{kT}\ x=t \quad,\quad \frac{mg}{kT}\ dx=dt $$
+$$ \int_{0}^{\infty}\ e^{-\frac{mgx}{kT}\ dx}\ =\ -\frac{kT}{mg}\ (0-1)\ =\ \frac{kT}{mg} $$
+\\
+Integral u brojniku rje\v{s}avamo parcijalnom integracijom na sljede\'ci na\v{c}in: 
+$$ u=x \quad,\quad du=dx \quad,\quad dv=e^{-\frac{mgx}{kT}dx} \quad,\quad v=-\frac{mg}{kT}\ e^{-\frac{mgx}{kT}} $$
+$$ =\ -x\ \frac{kT}{mg}\ e^{-\frac{mgx}{kT}}\ +\int_{0}^{\infty}\ \frac{kT}{mg}\ e^{-\frac{mgx}{kT}}\ dx\ =\ \left( \frac{kT}{mg}  \right)^2 $$
+\newpage
+Uvr\v{s}tavaju\'ci rje\v{s}enja u izraz za te\v{z}i\v{s}te plina, dobivamo:
+\\
+$$ \overline{x}\ =\ \frac{\int_{0}^{\infty}\ x\ e^{-\frac{mgx}{kT}}\ dx}{\int_{0}^{\infty}\ e^{-\frac{mgx}{kT}}\ dx}\ =\ \frac{\left( \frac{kT}{mg} \right)^2}{\frac{kT}{mg}} $$
+\\
+$$ \overline{x}\ =\ \frac{kT}{mg} \quad \Rightarrow \quad m\ =\ \frac{kT}{g\overline{x}} $$
+\\
+$$ m\ =\ \frac{1,38*10^{-23}\ \frac{J}{K}\ *\ 283,15\ K}{9,81\ \frac{m}{s^2}\ *\ 30*10^3\ m}\ =\ 1,33*10^{-26}\ kg $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	U posudi visine $250\ m$ nalazi se argon pri konstantnoj temperaturi $275\ K$. 
+	Neka je pri dnu posude srednji slobodni put atoma $l(0)=5*10^{-6}\ m$.
+	Odredite srednji slobodni put atoma pri vrhu posude. \\
+	Molarna masa argona jest $\mu=0,04\ \frac{kg}{mol}$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Za molekule u gravitacijskom polju koncentraciju u ovisnosti o pomaku uz uvjet konstantne temperature mo\v{z}emo izraziti formulom:
+\\
+$$ n(x)\ =\ n(0)\ e^{-\frac{Mgx}{kT}} $$
+\\
+$$ z\ =\ \frac{N}{N_A}\ =\ \frac{M}{\mu} \quad \Rightarrow \quad M\ =\ \frac{\mu N}{N_A} \quad \Rightarrow \quad M\ =\ \frac{\mu}{N_A} $$
+\\
+Za $N$ uzimamo $1$, tj. promatramo $1$ atom argona. \\
+Tako\dj er vrijedi $R=kN_A$.
+\\
+$$ l\ =\ \frac{1}{n \sigma \sqrt{2}} \quad \Rightarrow \quad n\ =\ \frac{1}{l \sigma \sqrt{2}} $$
+\\
+Uvr\v{s}tavanjem ovih izraza u po\v{c}etnu formulu, dobivamo:
+\\
+$$ \frac{1}{l(x)\ \sigma\ \sqrt{2}}\ =\ \frac{1}{l(0)\ \sigma\ \sqrt{2}}\ *\ \frac{1}{e^{\frac{\mu gx}{RT}}} $$
+\\
+$$ l(x)\ =\ l(0)\ *\ e^{\frac{\mu gx}{RT}}  $$
+\\
+$$ l(250\ m)\ =\ 5*10^{-6}\ m\ *\ e^{\frac{0,04\ \frac{kg}{mol}\ *\ 9,81\ \frac{m}{s^2}\ *\ 250\ m}{8,314\ \frac{J}{mol\ K}\ *\ 275\ K}} $$
+\\
+$$ l=5,22*10^{-6}\ m $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Promatraju\'ci idealni plin u kojem se nalazi $N$ istovrsnih jednoatomskih molekula, odredite \textit{particijsku funkciju} molekule, 
+	\textit{energiju}, i \textit{entropiju} plina.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Particijska funkcija \v{c}estice:
+\\
+$$ z\ =\ \frac{2s+1}{h^f}\ \int\ e^{-\beta E}\ d\phi $$
+\\
+Za jednoatomske molekule vrijedi:
+$$ f=3, \quad d\phi=d^3p\ d^3r $$
+\\
+Particijska funkcija jednoatomske molekule:
+\\
+\\
+$$ z\ =\ \frac{2s+1}{h^3}\ \int\ e^{-\beta\frac{p^2}{2m}}\ d^3p\ d^3r, \quad \beta=\frac{1}{kT} $$
+\\
+\\
+Integracijom po koordinatama dobivamo volumen:
+\\
+$$ \int\ d^3r=V $$
+\\
+Integracijom po impulsima dobivamo:
+\\
+$$ \int\ d^3p=\int_{0}^{\infty}\int_{0}^{\pi}\int_{0}^{2\pi}\ p^2\ \sin{\theta}\ dp\ d\theta\ d\phi = 4\pi \int_{0}^{\infty}\ p^2\ dp $$
+$$ d^3p=4\pi\ p^2\ dp $$
+\\
+\\
+$$ \int\ e^{-\beta\frac{p^2}{2m}}\ d^3p = 4\pi\ \int_{0}^{\infty}\ e^{-\beta\frac{p^2}{2m}}\ p^2\ dp = \left( \frac{2\pi m}{\beta} \right)^{\frac{3}{2}} $$
+\\
+$$ z=\frac{2s+1}{h^3}*V*\left( 2\pi mkT \right)^{\frac{3}{2}} $$
+
+\newpage
+\textbf{Prosje\v{c}na energija} molekule:
+\\
+$$ \overline{E}\ =\ -\left( \frac{\partial}{\partial \beta}\ \ln(z) \right)_V\ =\ \frac{3}{2}\ kT $$ 
+\\
+Ukupnu energiju molekula u plinu dobijemo zbrajaju\'{c}i prosje\v{c}ne energije svih \v{c}estica, tj. ukupna energija sustava je $N$ puta ve\'ca od 
+prosje\v{c}ne energije sustava.
+\\
+$$ U\ =\ N*\overline{E}\ =\ \frac{3}{2}\ NkT $$
+\\
+\\
+\textbf{Slobodnu energiju} plina ra\v{c}unamo iz izraza:
+\\
+$$ F\ =\ -kT\ \ln{\left[ \frac{1}{N!}\ z^N \right]}  $$
+\\
+Primjenimo Stirlingovu formulu:
+\\
+$$ \ln{\frac{1}{N!}} = N\ln{\frac{e}{N}} \quad \Rightarrow \quad F = -kT \left[N\ln{\frac{e}{N}}\ +\ \ln{z^N} \right] $$
+\\
+\\
+$$ F\ =\ -NkT\ \left[ \ln{\left( \frac{2s+1}{h^3}\ \frac{V}{N}\ \left( 2\pi mkT   \right)^{\frac{3}{2}}  \right)}\ +\ 1 \right] $$
+\\
+\\
+Po\v{s}to smo dobili izraz za slobodnu energiju, \textbf{tlak} plina mo\v{z}emo izra\v{c}unati kao:
+\\
+$$ p\ =\ -\left( \frac{\partial F}{\partial V} \right)_T\ =\ \frac{NkT}{V} $$
+\\
+\\
+\textbf{Entropiju} plina dobivamo iz izraza:
+\\
+\\
+$$ S\ =\ -\left( \frac{\partial F}{\partial T} \right)_V\ =\ Nk\left[\ln{\left[\frac{2s+1}{h^3}\ \frac{V}{N}\ \left(2\pi mkT\right)^{\frac{3}{2}}\right]}+\frac{5}{2}\right] $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Kolika je entropija sustava sastavljenog od $3N$ jednaka linearna harmoni\v{c}ka oscilatora koja titraju frekvencijom $\omega$?
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Particijska funkcija \v{c}estice:
+\\
+$$ z\ =\ \frac{2s+1}{h^f}\ \int\ e^{-\beta E}\ d\phi $$
+\\
+\\
+Po\v{s}to govorimo o linearnom harmoni\v{c}kom oscilatoru, nemamo spin i imamo 1 stupanj slobode. 
+$$ s=0, \quad f=1, \quad d\phi=dp\ dq $$
+\\
+Time izraz za particijsku funkciju \v{c}estice prelazi u particijsku funkciju linearnog harmoni\v{c}kog oscilatora danog izrazom:
+\\
+$$ z\ =\ \frac{1}{h}\ \int_{\infty}^{\infty}\int_{\infty}^{\infty}\ e^{-\beta\left( \frac{p^2}{2m}+\frac{m\omega^2q^2}{2} \right)}\ dp\ dq, \quad \beta=\frac{1}{kT} $$
+\\
+Integriramo izraz:
+\\
+$$ z\ =\ \frac{kT}{\hbar\omega} $$
+\\
+\\
+Po\v{s}to imamo odre\dj enu particijsku funkciju, mo\v{z}emo odrediti i slobodnu energiju:
+\\
+$$ F\ =\ -3NkT\ \ln{\left( \frac{kT}{\hbar\omega} \right)} $$
+\\
+\\
+Iz Maxwellovih relacija znamo da je entropija jednaka negativnoj derivaciji slobodne energije po temperaturi:
+\\
+\\
+$$ S\ =\ -\left( \frac{\partial F}{\partial T} \right)_V\ =\ 3Nk\ \left( 1+\ln{\frac{kT}{\hbar\omega}} \right) $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Zadana je Hamiltonova funkcija trodimenzionalnog izotropnog harmoni\v{c}kog oscilatora:
+	$$ H\ =\ \frac{p_x^2+p_y^2+p_z^2}{2m}\ +\ m\omega^2\ \frac{x^2+y^2+z^2}{2} $$
+	Odredite produkt srednje vrijednosti kvadrata impulsa i srednje vrijednosti kvadrata pomaka iz ravnote\v{z}nog polo\v{z}aja.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+U klasi\v{c}noj fizici, \textbf{zakon jednake raspodjele energije} je op\'cenit. 
+\\
+Bez obzira na oblik gibanja, uvijek je prosje\v{c}na kineti\v{c}ka energija za stupanj slobode jednaka $\frac{kT}{2}$.
+\\
+\\
+Harmoni\v{c}ki oscilator zadan u zadatku ima $3$ stupnja slobode u $x$, $y$ i $z$ smjeru od kojih svaki ima prosje\v{c}nu kineti\v{c}ku energiju $\frac{kT}{2}$, tj:
+\\
+\\
+$$ \overline{\frac{p_x^2}{2m}} = \overline{\frac{p_y^2}{2m}} = \overline{\frac{p_z^2}{2m}} = \frac{kT}{2} $$
+\\
+$$ \overline{p_x^2} = \overline{p_y^2} = \overline{p_z^2} = mkT $$
+\\
+Srednju vrijednost kvadrata impulsa i kvadrata pomaka mo\v{z}emo zapisati kao:
+\\
+$$ \overline{p^2} = \overline{p_x^2} + \overline{p_y^2} + \overline{p_z^2} $$
+$$ \overline{r^2} = \overline{x^2} + \overline{y^2} + \overline{z^2} $$
+\\
+Iz toga slijedi:
+\\
+$$ \overline{p^2} = 3\ mkT $$
+
+\newpage
+Prosje\v{c}ne vrijednosti kineti\v{c}ke i potencijalne energije linearnog harmoni\v{c}kog oscilatora me\dj usobno su jednake.
+\\
+Kineti\v{c}ka i potencijalna energija daju prosje\v{c}noj vrijednosti energije harmoni\v{c}kog oscilatora isti doprinos $\frac{kT}{2}$.
+\\
+\\
+Prosje\v{c}na potencijalna energija harmoni\v{c}kog oscilatora sa tri stupnja slobode je dana izrazom:
+\\
+$$ \overline{\frac{m\omega^2x^2}{2}} = \overline{\frac{m\omega^2y^2}{2}} = \overline{\frac{m\omega^2z^2}{2}} = \frac{kT}{2} $$
+\\
+$$ \overline{x^2} = \overline{y^2} = \overline{z^2} = \frac{kT}{m\omega^2} $$
+\\
+$$ \overline{r^2} = 3\ \frac{kT}{m\omega^2} $$
+\\
+\\
+Sada tra\v{z}imo produkt srednje vrijednosti kvadrata impulsa i srednje vrijednosti kvadrata pomaka:
+\\
+\\
+$$ \overline{p^2}\ *\ \overline{r^2}\ =\ 3mkT*\frac{3kT}{m\omega^2}\ =\ \left( \frac{3kT}{\omega} \right)^2 $$
+\\
+\\
+\\
+Srednje vrijednosti kvadrata impulsa i kvadrata pomaka mo\v{z}emo izra\v{c}unati i na sljede\'ci na\v{c}in:
+\\
+
+
+
+
+
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kvantna statisti\v{c}ka fizika}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Zadan je sustav s dva energetska nivoa: 
+	$$ E_1=0\ ,\ E_2=E\ ,\ g_1=g_2 $$
+	gdje je $E=3*10^{-19}\ J$. \\
+	Na kojoj \'ce temperaturi biti zadovoljen uvjet da je:
+	\\
+	$$ \frac{d\overline{E}}{dT}\ =\ 6\ \frac{\overline{E}}{T} $$
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Prosje\v{c}na energija \v{c}estice je:
+$$ \overline{E}\ =\ \frac{E}{e^{\frac{E}{kT}}+1} $$
+\\
+$E$ je konstanta. \\
+Tra\v{z}imo derivaciju prosje\v{c}ne energije po temperaturi da mo\v{z}emo iskoristiti uvjet. \\
+$$ \frac{d\overline{E}}{dT}\ =\ k*\left(\ \frac{E}{kT} \right)^2\ \frac{e^{\frac{E}{kT}}}{\left( e^{\frac{E}{kT}}+1 \right)^2} $$
+\\
+Iskoristimo uvjet u dobivenoj derivaciji:
+$$ 6\ \frac{\overline{E}}{T}\ =\ k*\left(\ \frac{E}{kT} \right)^2\ \frac{e^{\frac{E}{kT}}}{\left( e^{\frac{E}{kT}}+1 \right)^2} $$
+\\
+Supstituiramo $x=\frac{E}{kT}$, gdje izraz za prosje\v{c}nu energiju $\overline{E}$ ve\'{c} imamo zadan.
+\\
+\\
+$$ 6\ \frac{E}{kT}\ \frac{1}{\left( e^\frac{E}{kT}+1 \right)}\ =\ \left(\ \frac{E}{kT} \right)^2\ \frac{e^{\frac{E}{kT}}}{\left( e^{\frac{E}{kT}}+1 \right)^2} $$
+\newpage
+$$ 6x\ \frac{1}{(e^x+1)}\ =\ x^2\ \frac{e^x}{(e^x+1)^2}  $$
+\\
+$$ x\ =\ 6\ (1+e^{-x}) $$
+\\
+Po\v{s}to jednad\v{z}ba ovog oblika nema algebarsko rje\v{s}enje, rje\v{s}avamo je iteracijom, tj. za neku po\v{c}etnu vrijednost od $x$, uvr\v{s}tavaju\'ci je u 
+jednad\v{z}bu, dobijamo rje\v{s}enje ve\'ce to\v{c}nosti. 
+\\
+Zadovoljit \'cemo se to\v{c}no\v{s}\'cu na prva \v{c}etiri decimalna mjesta.
+\\
+$$ x_0=6\ ,\ x_1=6,0149\ ,\ x_2=6,0146\ ,\ x_3=6,0147 $$
+\\
+Temperaturu odre\dj ujemo iz izraza:
+$$ \frac{E}{kT}\ =\ 6,0147 $$
+\\
+$$ T=3613\ K $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Promatramo sustav \v{c}estica koje su se smjestile na tri ekvidistantna nivoa:
+	$$ E_1=0\ ,\ E_2=E\ ,\ E_3=2E\ ,\ g_1=1\ ,\ g_2=4\ ,\ g_3=3 $$
+	pri \v{c}emu je razmak izme\dj u susjednih niova $E=0,1\ eV$.
+	\\
+	Na kojoj temperaturi \'ce zbroj \v{c}estica na 1. i 3. nivou biti jednak broju \v{c}estica na 2. nivou?
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Izraz za naseljenost i-tog energijskog nivoa:
+$$ N_i\ =\ C\ g_i\ e^{\-\frac{E_i}{kT}},\ i=1,2,3,... $$
+\\
+Uvjet iz zadatka nam ka\v{z}e da je:
+$$ N_1\ +\ N_3\ =\ N_2 $$
+\\
+Uvrstimo izraz za naseljenost i-tog energijskog nivoa u dani uvjet:
+$$ C\ \left( g_1\ e^{\-\frac{E_1}{kT}}\ +\ g_3\ e^{\-\frac{E_3}{kT}}\right)\ =\ C\ g_2\ e^{\-\frac{E_2}{kT}} $$
+$$ 1\ +\ 3*e^{\-\frac{2E}{kT}}\ =\ 4*e^{\-\frac{E}{kT}}  $$
+\\
+Supstitucijom $x=e^{\-\frac{E}{kT}}$ dobijamo kvadratnu jednad\v{z}bu:
+$$ 3x^2-4x+1=0 $$
+\\
+Rje\v{s}enjem kvadratne jednad\v{z}be dobijemo rje\v{s}enja za $x$ koja uvr\v{s}tavamo u supstituciju i time dobijamo tra\v{z}enu temperaturu.
+\\
+$$ x_1=1\ ,\ x_2=\frac{1}{3}\ ,\ gdje\ je\ x\ =\ e^{\-\frac{E}{kT}} $$
+\\
+$$ T_1=\infty\ K\ ,\ T_2=1056,3\ K $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	$N=10^{20}$ \v{c}estica se smjestilo na 8 energijskih nivoa
+	$$ E_n=nE\ ,\ n=0,1,2,3,4,5,6,7\ , $$
+	a svaki od njih sadr\v{z}i isti broj kvantnih stanja. \\
+	Izra\v{c}unajte toplinski kapacitet sustava ako je $kT=E$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Toplinski kapacitet sustava je zadan izrazom:
+$$ C_V\ =\ N\ \frac{d \overline{E}}{dT} $$
+\\
+Da bismo to izra\v{c}unali, prvo moramo odrediti prosje\v{c}nu energiju zadane \v{c}estice i na\'ci njenu derivaciju.
+Odredimo particijsku funkciju jedne \v{c}estice:
+\\
+$$ z\ =\ \sum_{n=0}^{7}\ g_n\ e^{-\frac{E_n}{kT}}\ $$
+\\
+Ovaj izraz predstavlja geometrijski red \v{c}iju sumu mo\v{z}emo izraziti formulom:
+$$ \sum_{n=0}^{k-1}\ a*r^k\ =\ a* \left( \frac{1-r^k}{1-r} \right)\ ,\ gdje\ je\ r \neq 1 $$
+\\
+Neka je:
+$$ a=g_n=g \quad , \quad e^{- \beta}=r \quad , \quad k=E_n $$
+\\
+Primjenom formule na particijsku funkciju \v{c}estice dobijamo izraz:
+$$ z\ =\ g\ \frac{1-e^{-8 \beta E}}{1-e^{- \beta E}}\ ,\ \beta\ =\ \frac{1}{kT} $$
+\\
+Prosje\v{c}na energija \v{c}estice odre\dj ena je izrazom:
+$$ \overline{E}\ =\ - \left( \frac{\partial}{\partial \beta}\ \ln(z) \right) $$
+\\
+$$ \overline{E}\ =\ - \frac{\partial}{\partial \beta}\ \ln g\ \frac{1-e^{-8 \beta E}}{1-e^{- \beta E}}\ =\ \frac{E}{e^{\frac{E}{kT}}-1}\ -\ \frac{8E}{e^{\frac{E}{kT}}-1} $$
+\newpage
+$$ \frac{d \overline{E}}{dT}\ =\ k*\left[ \frac{\left( \frac{E}{kT} \right)^2\ *\ e^{\frac{E}{kT}}}{ \left( e^{\frac{E}{kT}}-1 \right)^2}\ -\ 
+\frac{ \left( \frac{8E}{kT} \right)^2\ *\ e^{\frac{8E}{kT}}}{\left( e^{\frac{8E}{kT}}-1 \right)^2}  \right]  $$
+\\
+\\
+U postavkama zadatka imamo zadano $E=kT$ i $N=10^{20}$. \\
+Uvr\v{s}tavamo postavke i dobivenu derivaciju u izraz za toplinski kapacitet sustava:
+\\
+$$ C_V\ =\ N\ \frac{d \overline{E}}{dT} \quad \Rightarrow \quad C_V=N\ k*\ \left[ \frac{e}{(e-1)^2}\ -\ \frac{8^2\ e^8}{(e^8-2)^2} \right] $$
+\\
+\\
+$$ C_V\ =\ 1,24*10^{-3}\ \frac{J}{K} $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	U sustavu sa dva energijska nivoa, na gornjem nivou nalazi se $80\%$ \v{c}estica.
+	Odredite temperaturu sustava ako je broj kvantnih stanja na gornjem nivou dva puta ve\'{c}i nego na donjem nivou, 
+	a energijski procijep izme\dj u nivoa jest $E_2-E_1=1,5\ eV$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Izraz za naseljenost i-tog energijskog nivoa:
+$$ N_i\ =\ C\ g_i\ e^{\-\frac{E_i}{kT}} $$
+\\
+Izrazimo uvjete dane u zadatku:
+$$ \frac{N_1}{N_2}\ =\ \frac{1}{4} \quad , \quad \frac{g_1}{g_2}\ =\ \frac{1}{2} $$
+\\
+$$ \frac{N_1}{N_2}\ =\ \frac{g_1\ e^{- \frac{E_1}{kT}}}{g_2\ e^{- \frac{E_2}{kT}}} $$
+\\
+$$ \frac{N_1}{N_2}\ =\ \frac{g_1}{g_2}\ e^{\frac{E_2-E_1}{kT}} $$
+\\
+$$ \frac{1}{4}\ =\ \frac{1}{2}\ e^{\frac{1,5\ eV}{kT}} $$
+\\
+$$ T\ =\ \frac{1,5*1,6*10^{-19}\ J}{1,3806*10^{-23}\ \frac{J}{K}\ \ln(\frac{1}{2})} $$
+\\
+$$ T\ =\ -25090,3\ K $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	U sustavu negativne temperature \v{c}estice su smje\v{s}tene na tri ekvidistantna energijska nivoa istih statisti\v{c}kih te\v{z}ina:
+	$$ E_1=E\ ,\ E_2=2E\ ,\ E_3=3E\ ,\ g_1=g_2=g_3 $$
+	Neka se na 1. nivou nalazi $N_1=10^{18}$, a na 2. nivou $N_2=2*10^{19}$ \v{c}estica. \\
+	Koliki je ukupan broj \v{c}estica u sustavu?
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Neka je:
+$$ g_1=g_2=g_3=g $$
+\\
+Naseljenost energijskih nivoa:
+$$ N_1\ =\ C\ g\ e^{\frac{E}{k|T|}}\ ,\ N_2\ =\ C\ g\ e^{\frac{2E}{k|T|}}\ ,\ N_3\ =\ C\ g\ e^{\frac{3E}{k|T|}} $$
+\\
+Pogledajmo odnos omjera naseljenosti razli\v{c}itih nivoa:
+$$ \frac{N_2}{N_1}\ =\ \frac{C\ g\ e^{\frac{2E}{k|T|}}}{C\ g\ e^{\frac{E}{k|T|}}}\ =\ \frac{e^{\frac{2E}{k|T|}}}{e^{\frac{E}{k|T|}}}\ =\ e^{\frac{2E-E}{k|T|}}\ =\ e^{\frac{E}{k|T|}} $$
+Vidimo da \'ce za omjer naseljenosti $N_3$ i $N_2$ biti jednak:
+$$ \frac{N_3}{N_2}\ =\ \frac{C\ g\ e^{\frac{3E}{k|T|}}}{C\ g\ e^{\frac{2E}{k|T|}}}\ =\ \frac{e^{\frac{3E}{k|T|}}}{e^{\frac{2E}{k|T|}}}\ =\ e^{\frac{3E-2E}{k|T|}}\ =\ e^{\frac{E}{k|T|}} $$
+\\
+Slijedi:
+$$ \frac{N_2}{N_1}\ =\ \frac{N_3}{N_2} \quad \Rightarrow \quad \frac{2*10^{19}}{10^{18}}\ =\ \frac{N_3}{2*10^{18}} $$
+\\
+$$ N_3\ =\ 4*10^{20} $$
+\\
+Ukupan broj \v{c}estica je:
+\\
+$$ N\ =\ N_1\ +\ N_2\ +\ N_3\ =\ 4,21*10^{20} $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Izvedite izraz za ukupan broj fotona crnog tijela volumena $V$ i temeperature $T$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+
+$$ N(\vec{q})\ =\ \frac{1}{e^{\frac{\hbar\omega}{kT}}+1} $$
+\\
+\\
+Dani izraz predstavlja \textbf{Planckovu funkciju raspodjele}. Ona odre\dj uje ravnote\v{z}nu raspodjelu fotona prema energijama $\hbar\omega$ pri temperaturi $T$.
+\\
+\\
+Elektromagnetski valovi su transverzalni. Svakom elektromagnetskom valu odre\dj ene frekvencije pridru\v{z}ena su dva titranja. 
+Svakom smjeru \v{s}irenja pripadaju dva harmoni\v{c}ka oscilatora jednake frekvencije, pa ukupan broj fotona dobivamo zbrajanjem dvostrukog izraza Planckove funkcije raspodjele 
+po svim valnim vektorima:
+\\
+$$ N_f\ =\ 2\ \sum_{\vec{q}}\ \frac{1}{e^{\frac{\hbar\omega}{kT}}-1}  $$
+\\
+Da bismo izra\v{c}unali ukupan broj fotona, transformirat \'cemo sumu po valnim vektorima na integral po frekvenciji:
+$$ \sum_{\vec{q}}\ \rightarrow\ \frac{V}{2 \pi^2 c^3}\ \int_{0}^{\infty}\ \omega^2\ d\omega $$
+\\
+Time izraz za ukupan broj fotona poprima sljede\'ci oblik:
+\\
+$$ N_f\ =\ \frac{V}{\pi^2 c^3}\ \int_{0}^{\infty}\ \frac{\omega^2\ d\omega}{e^{\frac{\hbar\omega}{kT}}-1} $$
+\\
+Supstituirajmo integral. Neka je $x=\frac{\hbar\omega}{kT}$. 
+\\
+\\
+$$ \int_{0}^{\infty}\ \frac{\omega^2\ d\omega}{e^{\frac{\hbar\omega}{kT}}-1}\ =\ \left( \frac{kT}{\hbar} \right)^3\ \int_{0}^{\infty}\ \frac{x^2\ dx}{e^x-1} $$
+
+\newpage
+Rije\v{s}imo prvo dobiveni integral.
+\v{C}lan $\frac{1}{1-e^{-x}}$ u integralu \'cemo razviti u \textbf{geometrijski red} kojeg poop\'ceno mo\v{z}emo zapisati kao:
+\\
+$$ \frac{1}{1-x}\ =\ \sum_{n=0}^{\infty}\ x^n\ =\ 1\ +\ x\ +\ x^2\ +\ x^3\ +... $$
+\\
+Integral poprima oblik:
+\\
+\\
+$$ \int_{0}^{\infty}\ \frac{x^2\ dx}{e^x-1}\ =\ \int_{0}^{\infty}\ \frac{e^{-x}\ x^2\ dx}{1-e^{-x}}\ =\ \int_{0}^{\infty}\ e^{-x}\ x^2\ dx\ (1\ +\ e^{-x}\ +\ e^{-2x}\ +...) $$  
+\\
+$$ \int_{0}^{\infty}\ \sum_{n=1}^{\infty}\ e^{-nx}\ x^2\ dx\ =\ \sum_{n=1}^{\infty}\ \int_{0}^{\infty}\ e^{-nx}\ x^2\ dx\ =\ 2\ \sum_{n=1}^{\infty}\ \frac{1}{n^3} $$
+\\
+\\
+Pribli\v{z}an iznos ove sume jest:
+\\
+$$ \sum_{n=1}\ \frac{1}{n^3}\ =\ 1,202 $$
+\\
+\\
+Vratimo se sad u izraz za broj fotona i uvrstimo dobiveno:
+\\
+\\
+$$ N_f\ =\ \frac{V}{\pi^2 c^3} \left( \frac{kT}{\hbar} \right)^3\ \int_{0}^{\infty}\ \frac{x^2\ dx}{e^x-1}
+\quad \Rightarrow \quad N_f\ =\ \frac{2*1,202}{\pi^2}*V*\left( \frac{kT}{c \hbar} \right)^3 $$
+\\
+\\
+Uvedimo konstantu:
+$$ b\ =\ \frac{2,404}{\pi^2} \left( \frac{k}{c \hbar} \right)^3 $$
+\\
+\\
+Dobijamo kona\v{c}an oblik:
+\\
+$$ N_f\ =\ b\ V\ T^3 $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	U temperaturnom podru\v{c}ju duboko ispod Debyeove temperature $\theta$, temperatura kristala snizila se od po\v{c}etne vrijednosti $T_1=20\ K$ 
+	na kona\v{c}nu vrijednost $T_2=10\ K$. Neka se u tom procesu unutra\v{s}nja energija kristalnog titranja smanjila za $3\ J$. \\
+	Primjenom Debyeovog modela odredite toplinski kapacitet re\v{s}etke u po\v{c}etnom i kona\v{c}nom stanju.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Prema Debyeovom modelu, u niskotemperaturnom podru\v{c}ju $(T << \theta)$, unutra\v{s}nja energija titranja kristalne re\v{s}etke jest:
+$$ U(T)\ =\ \frac{3\ \pi\ NkT}{5}\ \left( \frac{T}{\theta} \right)^2 $$
+\\
+Omjer unutra\v{s}njh energija na temperaturama $T_1$ i $T_2$ jest:
+\\
+$$ \frac{U(T_1)}{U(T_2)}\ =\ \frac{T_1^4}{T_2^4}\ =\ 16 $$
+\\
+Iz uvjeta vrijedi:
+$$ U(T_1)-U(T_2)\ =\ 3\ J $$
+\\
+Iz dva prethodna izraza dobivamo:
+$$ U(T_1)=3,2\ J \quad , \quad U(T_2)=0,2\ J $$
+\\
+Izraz za toplinski kapacitet pridru\v{z}en energiji $U(T)$ dobivamo kao derivaciju energije po temperaturi, tj:
+$$ C_V(T)\ =\ \frac{dU(T)}{dT} $$
+Slijedi:
+$$ C_V(T)\ =\ \frac{12\ \pi\ Nk}{5}\ \left( \frac{T}{\theta} \right)^2 $$
+\\
+Uvr\v{s}tavaju\'ci izraz za energiju $U(T)$, dobivamo:
+\\
+$$ C_V(T)\ =\ \frac{4\ *\ U(T)}{T} $$
+\\
+$$ C_V(T_1)=0,64\ \frac{J}{K} \quad , \quad C_V(T_2)=0,08\ \frac{J}{K} $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Pri kojoj koncentraciji iznos prosje\v{c}ne brzine u idealnom elektronskom plinu na apsolutnoj nuli postaje 
+	$$ \overline{v}=5*10^5\ \frac{m}{s}\ ? $$
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Vrijedi izraz:
+\\
+$$ \overline{v}\ =\ \frac{\int_{0}^{\infty} v\ \rho(v)\ d^3v}{\int_{0}^{\infty} \rho(v)\ d^3v} $$
+\\
+Na apsolutnoj nuli, za funkciju fermionske raspodjele, vrijedi:
+\begin{equation*}
+	\rho(v)\ =\left|\  
+	\begin{matrix}
+		1, & v<v_F \\
+		0, & v>v_F \\
+	\end{matrix}
+\end{equation*}
+\\
+\\
+Raspi\v{s}imo diferencijalni element volumena:
+$$ d^3v=v^2\ \sin{\theta}\ dv\ d\theta\ d\phi \quad \rightarrow \quad d^3v=\int_{0}^{\infty} \int_{0}^{\pi} \int_{0}^{2\pi}\ v^2\ \sin{\theta}\ dv\ d\theta\ d\phi $$
+$$ d^3v\ =\ 4\pi \int_{0}^{\infty}\ v^2\ dv $$
+\\
+Raspi\v{s}imo sada integral:
+\\
+$$ \overline{v}\ =\ \frac{\int_{0}^{v_F} v\ \rho(v)\ d^3v\ +\ \int_{v_F}^{\infty} v\ \rho(v)\ d^3v}{\int_{0}^{v_F} \rho(v)\ d^3v\ +\ \int_{v_F}^{\infty} \rho(v)\ d^3v} $$
+\\
+\\
+Po\v{s}to je za $v>v_F \quad \rho(v)=0$, drugi integrali u izrazu nestaju. U izraz uvrstimo element volumena i dobijamo kona\v{c}ni oblik:
+\\
+\\
+$$ \overline{v}\ =\ \frac{4\pi\ \int_{0}^{v_F} v^3\ dv}{4\pi\ \int_{0}^{v_F} v^2\ dv} $$
+
+\newpage
+Iz toga slijedi:
+\\
+$$ \overline{v}\ =\ \frac{\int_{0}^{v_F} v^3\ dv}{\int_{0}^{v_F} v^2\ dv}\ =\ \frac{\frac{1}{4}}{\frac{1}{3}}\ \frac{v^4}{v^3}\ =\ \frac{3}{4}\ v_F $$
+\\
+\\
+Uvrstimo u izraz za iznos Fermijeve brzine elektrona:
+\\
+\\
+$$ v_F\ =\ \frac{\hbar}{m}\ \sqrt[3]{\frac{3 \pi^2 N}{V}} $$
+\\
+$$ \frac{N}{V}\ =\ \frac{1}{3 \pi^2}\ \left( \frac{mv_F}{\hbar} \right)^3 \quad \Rightarrow \quad \frac{N}{V}\ 
+=\ \frac{1}{3 \pi^2}\ \left(\frac{4}{3} \frac{m\overline{v}}{\hbar} \right)^3 $$
+\\
+$$ \frac{N}{V}\ =\ \frac{1}{3 \pi^2}\ \left(\frac{4}{3}*\frac{9,109*10^{-31}\ kg}{\hbar} \right)^3\ \left( 5*10^5\ \frac{m}{s} \right)^3 $$
+\\
+\\
+\\
+$$ \frac{N}{V}=3,628*10^{28}\ \frac{1}{m^3} $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Odredite vjerojatnost da je na apsolutnoj nuli iznos translacijske brzine fermiona ve\'ci od iznosa srednje kvadrati\v{c}ne brzine $v_s=\sqrt{\overline{v^2}}$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Sa $v_F$ je zadana maksimalna brzina fermiona na apsolutnoj nuli i nazivamo je \textit{Fermieva brzina}. \\
+Tra\v{z}imo omjer broja fermiona sa brzinom ve\'com od srednje kvadrati\v{c}ne brzine $v_s$ i broja fermiona na svim mogu\'cim brzinama. \\
+Taj omjer je dan izrazom:
+\\
+$$ \omega\ =\ \frac{\int_{v_s}^{v_F}v^2dv}{\int_{0}^{v_F}v^2dv} $$
+\\
+$$ \omega\ =\ \frac{\int_{v_s}^{v_F}v^2dv}{\int_{0}^{v_F}v^2dv}\ =\ \frac{\frac{1}{3}}{\frac{1}{3}}\ \frac{(v_{F}^{3}-v_{s}^{3})}{(v_{F}^{3}-0)} $$
+\\
+$$ \omega\ =\ 1-\left( \frac{v_s}{v_F} \right)^3 $$
+\\
+Znamo da vrijedi sljede\'ci izraz za prosje\v{c}nu vrijednost kvadrata brzine: 
+$$ \overline{v^2}\ =\ \frac{3}{5}\ v_F^2 $$
+\\
+Slijedi:
+\\
+$$ \omega\ =\ 1-\left( \frac{\sqrt{\frac{3}{5}v_F^2}}{v_F} \right)^3\ =\ 1-\left( \sqrt{\frac{3}{5}} \right)^3 $$
+\\
+\\
+$$ \omega\ =\ 1-\left( \frac{3}{5}  \right)^{\frac{3}{2}} $$
+\\
+$$ \omega\ =\ 0,535 $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Uz pretpostavku da vrijedi uvjet primjenljivosti klasi\v{c}ne statisti\v{c}ke fizike 
+			$$ - \mu >> kT  $$
+	izvedite izraz za kemijski potencijal idealnog plina u kojem se $N$ \v{c}estica spina $s$ i mase $m$ translacijski giba u volumenu $V$.		
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Ukupan broj \v{c}estica u sustavu zadan je relacijom
+\\
+$$ N\ =\ \sum_{i}\ \frac{g_i}{e^{\frac{E_i-\mu}{kT}}\pm1} \quad \Rightarrow \quad  N\ =\ \int_{0}^{\infty}\ \frac{g(E)\ dE}{e^{\frac{E_i-\mu}{kT}}\pm1} $$
+\\
+gdje je u oznaci $\pm$ gorni predznak za fermione, a donji za bozone. \\
+Gusto\'ca stanja g(E) je dana izrazom:
+$$ g(E)\ =\ \frac{2s+1}{h^3}*4 \pi Vm*\sqrt{2mE} $$
+\\
+Ovom relacijom je tako\dj er odre\dj en \textit{kemijski potencijal} statisti\v{c}kog sustava u stanju termi\v{c}ke ravnote\v{z}e kao funkcija temperature i koncentracije \v{c}estica.
+\\
+Pri danoj temperaturi kemijski potencijal mora biti tako odabran da dana relacija bude ispunjena.
+\\
+\\
+Primjenimo sada uvjet zadatka. \\
+Po\v{s}to je $-\mu >> kT$, a energija $E$ je po definiciji pozitivna, tada u izrazu $e^{\frac{E_i-\mu}{kT}}\pm1$ jasno slijedi da je brojnik puno ve\'ci od nazivnika pa 
+izraz mo\v{z}emo aproksimirati izbacivanjem jedinice, tj. $e^{\frac{E_i-\mu}{kT}}$.
+\\
+\\
+Kona\v{c}an izraz ovisnosti kemijskog potencijala idealnog plina u ovisnosti o koncentraciji i temperaturi, uz dani uvjet, jest:
+\\
+\\
+$$ N\ =\ \frac{2s+1}{h^3}*4 \pi Vm*\sqrt{2m}*e^{\frac{\mu}{kT}}*\int_{0}^{\infty} \sqrt{E}\ e^{\frac{-E}{kT}} dE $$
+\\
+Sada nam samo preostaje rije\v{s}iti integral i izraziti ga preko danih veli\v{c}ina $N$, $s$, $m$ i $V$.
+\newpage
+Nakon integriranja, dobijamo:
+$$ N\ =\ \frac{2s+1}{h^3}*2*\pi*V*\sqrt{2m*(2m)^2}*e^{\frac{\mu}{kT}}*\frac{\sqrt{\pi}}{2}*(kT)^{\frac{3}{2}} $$
+\\
+$$ N\ =\ \frac{2s+1}{h^3}*\sqrt{\pi}*\pi*V*{2mkT}^{\frac{3}{2}}*e^{\frac{\mu}{kT}}\ \Big/ \ln $$
+\\
+\\
+$$ \mu\ =\ \ln{ \left( \frac{(2s+1)*V*(2 \pi mkT)^{\frac{3}{2}})}{Nh^3} \right) }*(-kT) \quad \footnote{Minus dobijemo zbog zamjene brojnika i nazivnika u logaritmu.} $$ 
+\\
+\\
+Dobili smo formulu za \textit{kemijski potencijal} idealnog plina. \\
+\\
+Provjerimo jo\v{s} uvjet primjenljivosti klasi\v{c}ne statisti\v{c}ke fizike.
+\\
+Zapi\v{s}imo jednad\v{z}bu kao:
+\\
+$$ - \mu\ =\ kT * \ln{(X)} $$
+\\
+Iz ovog zapisa vidimo da ako \v{z}elimo da uvjet $- \mu >> kT$ vrijedi, $\ln{(X)}$ mora biti pozitivan i mnogo ve\'ci od 1.
+\\
+\\
+Ako je $\ln{(X)}>>1$, onda slijedi:
+$$ \left( \frac{(2s+1)*V*(2 \pi mkT)^{\frac{3}{2}})}{Nh^3} \right) >> 1 $$ 
+\\
+U podru\v{c}ju statisti\v{c}ke fizike taj uvjet mora biti ispunjen kako je i navedeno u zadatku.
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Promotrimo mon\v{s}tvo fermiona koji se translacijski gibaju u idealnom plinu. 
+	Neka je zadan kemijski potencijal fermiona na apsolutnoj nuli $\mu_0=3*10^{-21}\ J$. \\
+	Izra\v{c}unajte kemijski potencijal pri temperaturi $T=5000\ K$.
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Izra\v{c}unajmo prvo termi\v{c}ku energiju sustava pri $5000\ K$:
+$$ kT\ =\ 1,3806*10^{-23}\frac{J}{K}\ *\ 5000K\ =\ 6,903*10^{-20}J $$
+\\
+Usporedimo kemijski potencijal sa dobivenom termi\v{c}kom energijom:
+$$ 3*10^{-21}J << 6,903*10^{-20}J \quad \Rightarrow \quad \mu_0 << kT $$
+\\
+Po\v{s}to ovaj uvjet vrijedi, kvantnu raspodjelu mo\v{z}emo aproksimirati klasi\v{c}nom Boltzmannovom raspodjelom.
+\\
+U prethodnom zadatku smo izveli formulu:
+\\
+$$ \mu\ =\ \ln{ \left( \frac{(2s+1)*V*(2 \pi mkT)^{\frac{3}{2}})}{Nh^3} \right) }*(-kT) $$ 
+\\
+\\
+Izvedimo sada izraz za $\mu_0\ (T=0K)$.
+U suprotnoj granici apsolutne nule, za kemijski potencijal fermiona vrijedi:
+\\
+$$ \mu_0\ =\ \frac{\hbar^2}{2m}\left[ \frac{6 \pi^2 N}{(2s+1)V}  \right]^{\frac{2}{3}}  $$
+\\
+Izraz svedemo na:
+\\
+\\
+$$ \frac{(2s+1)*V*m^{\frac{3}{2}}}{N \hbar^3}\ =\ \frac{3*2 \pi^2}{(2 \mu_0)^{\frac{3}{2}}*4 \pi} $$
+\newpage
+Ovu jednakost supstituiramo u "klasi\v{c}ni" izraz:
+\\
+\\
+$$ \mu\ =\ (-kT)\ *\ \ln{\left( \frac{3}{4 \pi} \left( \frac{\pi kT}{\mu_0} \right)^{\frac{3}{2}} \right)}  $$
+\\
+$$ \mu\ =\ -1,3806*10^{-23}\frac{J}{K}\ *\ 5000K\ *\ \ln{ \left(0,2387\ *\ 614,610 \frac{J}{J} \right)} $$
+\\
+\\
+$$ \mu\ =\ -3,44*10^{-19}\ J $$
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ZDK}
+	Zadana je gusto\'ca stanja fermionskog sustava
+	$$ g(E)=C*V*E^3 $$
+	pri \v{c}emu konstanta proporcionalnosti ima vrijednost 
+	$$ C=2,5*10^{102}\ \frac{1}{m^3 J^4}\ . $$
+	Kolika mora biti fermionska koncentracija da bi prosje\v{c}na energija fermiona na apsolutnoj nuli bila 
+	$$ \overline{E}=0,8\ eV\ ? $$
+\end{ZDK}
+\textbf{Rje\v{s}enje:} \\
+\newline
+Prosje\v{c}na energija fermiona na apsolutnoj nuli odre\dj ena je izrazom:
+\\
+\\
+$$ \overline{E}\ =\ \frac{\int_{0}^{\infty}\ E*g(E)*\rho(E)*dE}{\int_{0}^{\infty}\ g(E)*\rho(E)*dE} $$
+\\
+\\
+Na apsolutnoj nuli, za funkciju fermionske raspodjele, vrijedi:
+\begin{equation*}
+	\rho(E)\ =\left|\  
+	\begin{matrix}
+		1, & E<\mu_0 \\
+		0, & E>\mu_0 \\
+	\end{matrix}
+\end{equation*}
+\\
+Raspi\v{s}imo sada integral:
+\\
+\\
+$$ \overline{E}\ =\ \frac{\int_{0}^{\mu_0} E\ g(E)\ \rho(E)\ dE\ +\ \int_{\mu_0}^{\infty} E\ g(E)\ \rho(E)\ dE}
+{\int_{0}^{\mu_0} g(E)\ \rho(E)\ dE\ +\ \int_{\mu_0}^{\infty} g(E)\ \rho(E)\ dE} $$
+\\
+\\
+Po\v{s}to je za $E>\mu_0 \quad \rho(E)=0$, drugi integrali u izrazu nestaju. U izraz uvrstimo element volumena i dobijamo kona\v{c}ni oblik:
+\\
+\\
+$$ \overline{E}\ =\ \frac{\int_{0}^{\mu_0} E\ g(E)\ dE}{\int_{0}^{\mu_0} g(E)\ dE} $$
+
+\newpage
+$$ \overline{E}\ =\ \frac{CV\ \int_{0}^{\mu_0}\ E^4*dE}{CV\ \int_{0}^{\mu_0}\ E^3*dE} \quad \Rightarrow \quad \overline{E}\ =\ \frac{\frac{1}{5}}{\frac{1}{4}}\ \frac{E^5}{E^4}
+\ =\ \frac{4}{5}\ \frac{\mu_0^5-0}{\mu_0^4-0}\ =\ \frac{4}{5}\ \mu_0 $$
+\\
+$$ \overline{E}\ =\ \frac{4}{5}\ \mu_0 $$
+\\
+Izraz za broj \v{c}estica jest
+$$ N = \int_{0}^{\infty}g(E)*\rho(E)*dE $$
+pri \v{c}emu je $\rho(E)$ Fermi-Diracova, odnosno Bose-Einsteinova funkcija:
+$$ \rho(E)\ =\ \frac{1}{e^{\frac{E-\mu}{kT}} \pm 1} $$
+\\
+\\
+Po\v{s}to sustav promatramo za $E<\mu_0$, mo\v{z}emo definirati uvjet konstantnosti broja \v{c}estica:
+\\
+$$ N = \int_{0}^{\mu_0}g(E)dE\ =\ \frac{CV \mu_0^{4}}{4} $$
+\\
+Koriste\'ci se prija\v{s}nje dobivenim izrazom za prosje\v{c}nu energiju, slijedi:
+\\
+$$ \frac{N}{V}\ =\ \frac{C}{4} \left( \frac{5}{4} \overline{E} \right)^4 $$
+\\
+$$ \frac{N}{V}\ =\ \frac{1}{4}\ *\ 2,5*10^{102} \frac{1}{m^3 J^4}\ *\ \left( \frac{5}{4}\ *\ 0,8\ *\ 1,6*10^{-19}J \right)^4 $$
+\\
+\\
+$$ \frac{N}{V} = 4,09*10^{26}\ \frac{1}{m^3} $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Dodatak}
+\subsection{Fizikalne konstante}
+\\
+\\
+\\
+Popis nekih konstanti kori\v{s}tenih pri rje\v{s}avanju zadataka kao i odnos nekih, \v{c}esto kori\v{s}tenih, fizikalnih veli\v{c}ina:
+\begin{itemize}
+	\item \textit{Boltzmannova konstanta:} $\ k=1,3806*10^{-23}\ \frac{J}{K}$
+	\\
+	\item \textit{Avogadrov broj \v{c}estica:} $\ N_A=6,022*10^{23}\ \frac{1}{mol}$
+	\\
+	\item \textit{Univerzalna plinska konstanta:} $\ R=kN_A=8,314\ \frac{J}{mol\ K}$
+	\\
+	\item \textit{Gravitacijska konstanta:} $\ G=6,674*10^{-11}\ \frac{m^3}{kg\ s^2}$
+	\\
+	\item \textit{Planckova konstanta:} $\ h=6,626*10^{-34}\ Js$
+	\\
+	\item \textit{Reducirana Planckova konstanta:} $\ \hbar=\frac{h}{2 \pi}=1,054*10^{-34}\ Js$
+	\\
+	\item $1\ eV\ =\ 1,602*10^{-19}\ J$
+	\\
+	\item $1^{\circ}C\ =\ 273,15\ K$
+\end{itemize}
+
+\newpage
+\subsection{Vrijednosti funkcije standardne normalne raspodjele $\Phi(x)$}
+
+ \begin{figure}[h!]
+        \centering
+	\includegraphics[scale=2.7]{tablicafi.png}
+ \end{figure}
+
+\newpage
+\subsection{Rje\v{s}enja nekih specijalnih integrala}
+Standardan na\v{c}in rje\v{s}avanja Gaussovog integrala\footnote{Gaussov integral je integral Gaussove funkcije $f(x)=e^{-x^2}$ preko cijele realne osi.
+Integral je oblika $\int_{-\infty}^{\infty}\ e^{(-x^2)}dx=\sqrt{\pi}$.} potje\v{c}e jo\v{s} od Poissona i koristi svojstvo:
+\\
+$$ \left( \int_{-\infty}^{\infty}\ e^{(-x^2)}\ dx \right)^2\ =\int_{-\infty}^{\infty}\ e^{(-x^2)}dx\  \int_{-\infty}^{\infty}\ e^{(-y^2)}dy\ =
+\  \int_{-\infty}^{\infty}\ \int_{-\infty}^{\infty}\ e^{-(x^2+y^2)}\ dx\ dy $$
+\\
+\\
+Sada promatramo funkciju $e^{-(x^2+y^2)}=e^{-r^2}$ preko cijele ravnine $\mathbb{R}^2$ i uspore\dj ujemo funkciju u Cartesiusovim i polarnim koordinatama:
+\\
+$$ \left( \int_{-\infty}^{\infty}\ e^{(-x^2)}\ dx \right)^2\ = \int \int_{\mathbb{R}^2}\ e^{-(x^2+y^2)}\ dx\ dy\ 
+=\ \int_{0}^{2\pi}\ \int_{0}^{\infty}\ e^{-r^2}\ r\ dr\ d\theta $$
+\\
+Integrali s obje strane jednakosti razapinju cijelu ravninu $\mathbb{R}^2$.
+Dodatnu varijablu $r$ u polarnim koordinatama smo dobili kao Lam\'{e}ov koeficijent.
+\\
+\\
+Ra\v{c}unamo integral u polarnim koordinatama:
+\\
+$$ =2\pi\ \int_{0}^{\infty}\ r\ e^{-r^2}\ dr $$
+\\
+Uvodimo supstituciju $t=-r^2$ i gubimo minus tako da okrenemo granice integracije i promijenimo im predznake:
+\\
+$$ =2\pi \int_{-\infty}^{0}\ \left( -\frac{1}{2} \right) \ e^{t}\ dr\ =\ \pi \int_{-\infty}^{0}\ e^t\ dt $$
+\\
+$$ =\pi(e^0-e^{-\infty})\ =\ \pi(1-0)\ =\ \pi $$
+\\
+Izjedna\v{c}avaju\'ci rezultat sa integralom u Cartesiusovim koordinatama dobivamo:
+\\
+$$ \left( \int_{-\infty}^{\infty}\ e^{-x^2}\ dx \right)^2\ =\ \pi $$
+\newpage
+Iz toga slijedi:
+\\
+$$ \int_{-\infty}^{\infty}\ e^{-x^2}\ dx\ =\ \boldsymbol{\sqrt{\pi}} \quad \Rightarrow \quad \ \int_{0}^{\infty}\ e^{-x^2}\ dx\ =\ \boldsymbol{\frac{\sqrt{\pi}}{2}} $$
+\\
+\\
+\\
+Definirajmo sad integrale oblika
+\\
+$$ I_n\ =\ \int_{0}^{\infty}\ x^n\ e^{-x^2}\ dx $$
+\\
+Parcijalnom integracijom dobijamo:
+\\
+\\
+$$ I_n\ =\ \frac{n-1}{2}\ \int_{0}^{\infty}\ x^{n-2}\ e^{-x^2}\ dx\ =\ \frac{n-1}{2}\ I_{n-2} $$
+\\
+\\
+Pomo\'cu dobivene rekurzivne formule mo\v{z}emo sve integrale s parnim $n$ svesti na $I_0$ koji smo ve\'c izra\v{c}unali.
+\\
+\\
+Analogno, integrali s neparnim $n$ mogu se izraziti pomo\'cu $I_1$:
+\\
+\\
+$$ I_1\ =\ \int_{0}^{\infty}\ x\ e^{-x^2}\ dx\ =\ -\frac{1}{2}\ \int_{0}^{\infty}\ d\ e^{-x^2}\ =\ \frac{1}{2} $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{thebibliography}{11}
+	\bibitem{statisticka}
+		Vladimir \v{S}ips.
+		\textit{"Uvod u statisti\v{c}ku fiziku"} \\
+		\v{S}kolska knjiga, Zagreb 1990.
+\end{thebibliography}
+
+\end{document}
